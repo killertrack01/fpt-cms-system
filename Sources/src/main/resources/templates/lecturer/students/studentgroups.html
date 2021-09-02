@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+    <title>Student Group - Dashboard</title>
+</head>
+
+<body class="antialiased">
+<div class="page">
+    <!-- Include Navbar -->
+    <header th:replace="lec-fragments :: lecnavbar"></header>
+    <div th:replace="lec-fragments :: lecsubnav"></div>
+    <div class="content">
+        <div class="container-fluid">
+            <!-- Page title -->
+            <div class="d-print-none">
+                <div class="row align-items-center">
+                    <!-- Page title actions -->
+                    <div class="page-header d-print-none">
+                        <div class="row ">
+                            <div class="d-flex justify-content-between">
+                                <h2 class="page-title">
+                                    StudentGroup List
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cards">
+                <!-- List Option Search -->
+                <div th:replace="lecturerformpartial :: searchStudentGroup"></div>
+            </div><br/>
+            <div id="renderSG">
+
+            </div>
+        </div>
+        <footer th:replace="fragments :: footer"></footer>
+    </div>
+</div>
+
+<!-- Model Create Student Group -->
+<div class="modal modal-blur fade show" id="modal-create-studentgroup" tabindex="-1" aria-modal="true"
+     role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Students List</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+<script th:src="@{/dist/js/lecturerstudentgroup.js}"></script>
+<div th:replace="fragments :: scriptjs"></div>
+</html>

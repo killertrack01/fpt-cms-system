@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+   <title>Import Subject - Dashboard</title>
+</head>
+
+<body class="antialiased">
+<div class="page">
+   <!-- Include Navbar -->
+   <header th:replace="fragments :: navbar"></header>
+   <div th:replace="fragments :: subnav"></div>
+   <div class="content">
+      <div class="container-fluid">
+         <!-- Page title -->
+         <div class="d-print-none">
+            <div class="row align-items-center">
+               <!-- Page title actions -->
+               <div class="page-header d-print-none">
+                  <div class="row align-items-center">
+                     <div class="col">
+                        <h2 class="page-title text-uppercase justify-content-center">
+                           Import Student List
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row row-cards justify-content-center">
+            <div class="col-7">
+               <th:block th:if="${success}">
+                  <div class="alert alert-important alert-success alert-dismissible" role="alert">
+                     <div class="d-flex">
+                        <div>
+                           <!-- Download SVG icon from http://tabler-icons.io/i/check -->
+                           <!-- SVG icon code with class="alert-icon" -->
+                        </div>
+                        <div>
+                           Import Successful !
+                        </div>
+                     </div>
+                     <a class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+               </th:block>
+               <th:block th:if="${error}">
+                  <div class="alert alert-important alert-danger alert-dismissible" role="alert">
+                     <div class="d-flex">
+                        <div>
+                           <!-- Download SVG icon from http://tabler-icons.io/i/check -->
+                           <!-- SVG icon code with class="alert-icon" -->
+                        </div>
+                        <div>
+                           Import Fail !
+                        </div>
+                     </div>
+                     <a class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+               </th:block>
+               <div class="card p-4">
+                  <div class="mb-3">
+                     <form id="studentimportform" th:action="@{/api/importdatastudentexcel}" method = "POST" enctype = "multipart/form-data">
+                        <div class="form-label">Student File Excel</div>
+                        <input type="file" name="file" id="file" class="form-control" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required/><br>
+                        <input type="submit" class="btn btn-vk btn-md" value="Import"/><br><br>
+                        <small><b>File Extension:</b> only allow <span class="text-green">.xlsx</span> file (Excel)</small><br>
+                        <small><b>Format 14 Columns:</b> <span class="text-google">FullName</span> | <span class="text-google">Rollnum
+                        </span> | <span class="text-google">DOB</span> | <span class="text-google">Gender</span> | <span class="text-google">IDCard</span> | <span class="text-google">DateOfIssue</span>
+                           | <span class="text-google">PlaceOfIssue</span>  | <span class="text-google">MobilePhone</span>  | <span class="text-google">Email</span>  | <span class="text-google">CollegeEmail</span>
+                           | <span class="text-google">Image</span>  | <span class="text-google">Major</span>  | <span class="text-google">Status</span>  | <span class="text-google">Address</span> </small><br>
+                        <small><b>Image Format:</b> Image must be enter text <span class="text-primary">default_user.png(default)</span></small><br/>
+                           <small><b>IDCard Format:</b> IDCard must be enter
+                              <span class="text-primary">only number</span></small><br/>
+                        <small><b>Format Sheet:</b> Name must be enter [Student]</small>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer th:replace="fragments :: footer"></footer>
+   </div>
+</div>
+<div th:replace="fragments :: scriptjs"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script th:src="@{/dist/js/subjectimport.js}"></script>
+<script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+   <title>Student Result</title>
+</head>
+<body class="antialiased">
+<div class="page">
+   <!-- Include Navbar -->
+   <header th:replace="stu-fragments :: stunavbar"></header>
+   <div th:replace="stu-fragments :: stusubnav"></div>
+   <div class="content">
+      <div class="container-fluid">
+         <!-- Page title -->
+         <div class="d-print-none">
+            <div class="row align-items-center">
+               <!-- Page title actions -->
+               <div class="page-header d-print-none">
+                  <div class="row ">
+                     <div class="d-flex justify-content-between">
+                        <h2 class="page-title">
+                           Student's Main Result
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row row-cards">
+            <div class="col-12">
+               <div class="card">
+                  <div class="table-responsive">
+                     <table id="tabledb1" class="table table-vcenter card-table table-bordered table-striped display">
+                        <thead>
+                        <tr>
+                           <th>Student Group</th>
+                           <th>Subject name</th>
+                           <th>Exam type <br><small>(ASM or OBJ)</small></th>
+                           <th>Bout<br><small>(1st or 2nd)</small></th>
+                           <th>Exam day<br><small>(yyyy-mm-dd)</small></th>
+                           <th>Exam time<br><small>(format 24h)</small></th>
+                           <th>Exam Result</th>
+                           <th>Exam status<br><small>(<40% is fail >=40% is pass )</small></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="r,state :${mainResult}" >
+
+                           <td class="Stugronm" th:text="${r.getStugronm()}"></td>
+                           <td class="Subjnm" th:text="${r.getSubjnm()}"></td>
+                           <td class="Examtype" th:text="${r.getExamtype()}"></td>
+                           <td class="Bout p-1" th:text="${r.getBout()}"></td>
+                           <td class="Examday" th:text="${r.getExamday()}"></td>
+                           <td class="Examtime" th:text="${r.getExamtime()}"></td>
+                           <td class="examresult"th:text="${r.getExamresults()}+'%'"></td>
+                           <td class="examstatus">none</td>
+                        </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="d-print-none mt-3">
+            <div class="row align-items-center">
+               <!-- Page title actions -->
+               <div class="page-header d-print-none">
+                  <div class="row ">
+                     <div class="d-flex justify-content-between">
+                        <h2 class="page-title">
+                           Student's Re-study Result
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row row-cards">
+            <div class="col-12">
+               <div class="card">
+                  <div class="table-responsive">
+                     <table id="tabledb1" class="table table-vcenter card-table table-bordered table-striped display">
+                        <thead>
+                        <tr>
+                           <th>Student Group</th>
+                           <th>Subject name</th>
+                           <th>Exam type <br><small>(ASM or OBJ)</small></th>
+                           <th>Bout<br><small>(1st or 2nd)</small></th>
+                           <th>Exam day<br><small>(yyyy-mm-dd)</small></th>
+                           <th>Exam time<br><small>(format 24h)</small></th>
+                           <th>Exam Result</th>
+                           <th>Exam status<br><small>(<40% is fail >=40% is pass )</small></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="r:${reResult}">
+                           <td class="Stugronm" th:text="${r.getStugronm()}"></td>
+                           <td class="Subjnm" th:text="${r.getSubjnm()}"></td>
+                           <td class="Examtype" th:text="${r.getExamtype()}"></td>
+                           <td class="Bout p-1" th:text="${r.getBout()}"></td>
+                           <td class="Examday" th:text="${r.getExamday()}"></td>
+                           <td class="Examtime" th:text="${r.getExamtime()}"></td>
+                           <td class="examresult" th:text="${r.getExamresults()}+'%'"></td>
+                           <td class="examstatus">None</td>
+                        </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer th:replace="fragments :: footer"></footer>
+   </div>
+</div>
+
+<div th:replace="fragments :: scriptjs"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script th:src="@{/dist/js/studentUser.js}"></script>
+</body>
+
+</html>

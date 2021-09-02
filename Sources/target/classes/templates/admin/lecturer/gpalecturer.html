@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+   <title>GPA Of Lecturer - Dashboard</title>
+   <link rel="stylesheet" th:href="@{/dist/libs/sweetalert2/dist/sweetalert2.min.css}">
+</head>
+
+<body class="antialiased">
+   <div class="page">
+      <!-- Include Navbar -->
+      <header th:replace="fragments :: navbar"></header>
+      <div th:replace="fragments :: subnav"></div>
+      <div class="content">
+         <div class="container-fluid">
+            <!-- Page title -->
+            <div class="d-print-none">
+               <div class="row align-items-center">
+                  <!-- Page title actions -->
+                  <div class="page-header d-print-none">
+                     <div class="row ">
+                        <div class="col-auto">
+                            <div class="mb-3">
+                                <select id="gpamonth" class="form-select" aria-label="Default select example">
+                                    <option value="0" selected>Select Month</option>
+                                    <option value="1">January</option>
+                                    <option value="2">Fedruary</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="mb-3">
+                                <select id="gpayear" class="form-select" aria-label="Default select example">
+                                    <option value="0" selected disabled>Select Year</option>
+                                    <option th:each="y : ${years}" th:value="${y}" th:text="${y}"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="mb-3">
+                                <select id="lecturid" class="form-select" aria-label="Default select example">
+                                    <option value="0" selected disabled>Select Lecturer</option>
+                                    <option th:each="item :${list}" th:value="${item.getLecturid()}" th:text="${item.getFullnm()}"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Submit -->
+                        <div class="col-auto">
+                            <div class="mb-3">
+                                <button type="button" onclick="findGpa()" id="btnSearchGpa" class="btn btn-instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <circle cx="10" cy="10" r="7" />
+                                    <line x1="21" y1="21" x2="15" y2="15" /></svg> Search</button>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row row-cards">
+               <div class="col-12">
+                  <div class="card" id="tablegpa">
+                   
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer th:replace="fragments :: footer"></footer>
+      </div>
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+   <script th:src="@{/dist/js/admingpalecturer.js}"></script>
+   <div th:replace="fragments :: scriptjs"></div>
+</body>
+</html>

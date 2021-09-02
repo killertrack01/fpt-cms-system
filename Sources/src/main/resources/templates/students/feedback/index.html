@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+	<title>Student Feedback - Dashboard</title>
+</head>
+
+<body class="antialiased">
+<div class="page">
+	<!-- Include Navbar -->
+	<header th:replace="stu-fragments :: stunavbar"></header>
+	<div th:replace="stu-fragments :: stusubnav"></div>
+	<div class="content">
+		<div class="container-fluid">
+			<!-- Page title -->
+			<div class="d-print-none">
+				<div class="row align-items-center">
+					<!-- Page title actions -->
+					<div class="page-header d-print-none">
+						<div class="row ">
+							<div class="d-flex justify-content-between">
+								<h2 class="page-title" th:text="'Feedbacks for Lecturer of ' + ${studentroll}">
+
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+
+				</div>
+			</div>
+			<input type="hidden" th:value="${studentroll}" id="studentroll"/>
+			<div class="row row-cards">
+				<div class="col-12">
+					<div class="card">
+						<div class="table-responsive">
+							<table id="tabledb" class="table table-vcenter card-table table-striped table-bordered">
+								<thead>
+								<tr>
+									<th>STUDENT GROUP</th>
+									<th>START DATE<br/><small>(YYYY-MM-DD)</small></th>
+									<th>END DATE<br/><small>(YYYY-MM-DD)</small></th>
+									<th>LECTURER</th>
+									<th>SUBJECTS</th>
+									<th>DO FEEDBACK</th>
+								</tr>
+								</thead>
+								<tbody>
+								
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer th:replace="fragments :: footer"></footer>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+<script th:src="@{/dist/js/studentfeedback.js}"></script>
+<div th:replace="fragments :: scriptjs"></div>
+</body>
+</html>

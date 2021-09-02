@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+	<title>Student Timetable</title>
+	<Style>
+
+	</Style>
+</head>
+<body class="antialiased">
+<div class="page">
+	<!-- Include Navbar -->
+	<header th:replace="stu-fragments :: stunavbar"></header>
+	<div th:replace="stu-fragments :: stusubnav"></div>
+	<div class="content">
+		<div class="container-fluid">
+			<!-- Page title -->
+			<div class="d-print-none">
+				<div class="row align-items-center">
+					<!-- Page title actions -->
+					<div class="page-header d-print-none">
+						<div class="row ">
+							<div class="d-flex justify-content-between">
+								<h2 class="page-title">
+									All Timetable List By Student Group
+								</h2>
+							</div>
+							<div class="row mt-3">
+								<!----------------------------->
+								<!-- form search show result -->
+								<!----------------------------->
+								<div class="form-row mb-2 row">
+									<div class="col-3" id="StudentGroupHolder">
+										<small>Search By Student Group</small>
+										<select class="form-select" id="searchstugroid" placeholder="stugroid">
+										</select>
+										<small></small>
+									</div>
+									<div class="col-3" id="SemesterHolder">
+										<small>Search By Semester</small>
+										<select class="form-select" id="searchSemester" placeholder="Semester">
+										</select>
+										<small></small>
+									</div>
+								</div>
+								<!--------------------------------->
+								<!-- end form search show time ---->
+								<!--------------------------------->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-cards">
+				<div class="col-12">
+					<div class="card">
+						<div style="overflow-y: scroll; height: 700px; " class="table-responsive ">
+							<table id="tabledb1" class="table table-vcenter card-table table-striped table-bordered display ">
+								<tr>
+									<td><p class="text-center text-secondary">No Data</p></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer th:replace="fragments :: footer"></footer>
+	</div>
+</div>
+<div th:replace="fragments :: scriptjs"></div>
+</body>
+<script th:src="@{/dist/js/studentTimetable.js}"></script>
+</html>

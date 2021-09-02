@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FptAcademySystemApplication<fpt-academy-system>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.fptacademysystem.FptAcademySystemApplication",
+            "projectName": "fpt-academy-system",
+            "args": ""
+        }
+    ]
+}

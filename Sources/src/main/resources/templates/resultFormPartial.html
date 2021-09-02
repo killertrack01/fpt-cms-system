@@ -1,0 +1,70 @@
+<div th:fragment="resultCreate">
+   <form id="formCreate">
+      <div class="form-row mb-2 row">
+         <div class="col-5">
+            <label for="Courses" class="form-label">Courses</label>
+            <select class="form-control" id="Courses"  placeholder="Courses">
+            </select>
+            <small></small>
+         </div>
+         <div class="col-7">
+            <label for="stugroid" class="form-label">Student Group</label>
+            <select class="form-control" id="stugroid" placeholder="stugroid">
+            </select>
+            <small></small>
+         </div>
+      </div>
+      <div class="form-row mb-2 row">
+         <div class="col-6">
+            <label for="Semester" class="form-label">Semester</label>
+            <select class="form-control" id="Semester" placeholder="Semester">
+            </select>
+            <small></small>
+         </div>
+         <div class="col-6">
+            <label for="subjdetailsid" class="form-label">Subject</label>
+            <select class="form-control" id="subjdetailsid" placeholder="subjdetailsid">
+            </select>
+            <small></small>
+         </div>
+         <input type="text" id="bout" hidden>
+      </div>
+      <div class="form-row mb-4 row">
+         <div class="col-12">
+            <div class="card">
+               <div class="table-responsive">
+                  <table id="stuList" class="table table-vcenter card-table table-striped">
+                     <thead>
+                     <tr>
+                        <th>Id</th>
+                        <th>Student Rollnum</th>
+                        <th>Student name</th>
+                        <th colspan="2">ASM</th>
+                        <th colspan="2">OBJ</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="form-row mb-4 row">
+            <div class="d-flex justify-content-between">
+               <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+               <input type="submit" class="btn btn-primary " value="Submit Result">
+            </div>
+         </div>
+      </div>
+   </form>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+   <script th:src="@{/dist/js/result.js}"></script>
+
+</div>

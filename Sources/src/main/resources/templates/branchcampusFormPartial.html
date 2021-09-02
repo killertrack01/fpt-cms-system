@@ -1,0 +1,161 @@
+<!-- Modal Create Branch campus -->
+<div th:fragment="branchcampusCreate">
+    <div class="modal modal-blur fade show" id="createBranchCampus" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">New Campus</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newbranchcampus">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="create_BranchCampusName">Campus name</label>
+                                        <input type="text" id="create_BranchCampusName" name="name" class="form-control" placeholder="Input new campus name">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Branch Name</label>
+                                        <select class="form-select" name="create_Branch" id="create_Branch">
+                                            <option value="0" selected>--Select Group--</option>
+                                            <div th:each="c:${branch}">
+                                                <option th:value="${c.getBranchid()}"><span th:text="${c.getBranchnm()}"></span></option>
+                                            </div>
+
+                                        </select>
+
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Location</label>
+                                        <select class="form-select" name="create_Location" id="create_Location">
+                                            <option value="0" selected>--Select Location--</option>
+                                            <div th:each="ca:${campus}">
+                                                <option th:value="${ca.getCampusid()}"><span th:text="${ca.getCampusnm()}"></span></option>
+                                            </div>
+
+                                        </select>
+
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="create_Address">Address</label>
+                                        <textarea type="text" id="create_Address" class="form-control" placeholder="Input Address"></textarea>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="Create Campus">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Form update branch campus -->
+<div th:fragment="branchcampusEdit">
+    <div class="modal modal-blur fade show" id="updatebranchcampus" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">Edit Subject</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editbranchcampus" enctype="multipart/form-data">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="hidden" id="edit_idBranchCampus" name="edit_idBranchCampus">
+                                    <div class="mb-3">
+                                        <label for="edit_BranchCampusName" class="form-label">Campus Name</label>
+                                        <input type="text" id="edit_BranchCampusName" name="edit_BranchCampusName" placeholder="Input new campus name" class="form-control">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="edit_Branch" class="form-label">Branch Name</label>
+                                        <select class="form-select" name="edit_Branch" id="edit_Branch">
+                                            <option value="0" selected>--Select Branch--</option>
+                                            <div th:each="c:${branch}">
+                                                <option th:value="${c.getBranchid()}"><span th:text="${c.getBranchnm()}"></span></option>
+                                            </div>
+
+                                        </select>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Location</label>
+                                        <select class="form-select" name="edit_Location" id="edit_Location">
+                                            <option value="0" selected>--Select Location--</option>
+                                            <div th:each="ca:${campus}">
+                                                <option th:value="${ca.getCampusid()}"><span th:text="${ca.getCampusnm()}"></span></option>
+                                            </div>
+
+                                        </select>
+
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="edit_Address">Address</label>
+                                        <textarea type="text" id="edit_Address" class="form-control" placeholder="Input Address"></textarea>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="Update Subject">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Scripts -->
+<div th:fragment="branchcampusScripts">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script th:src="@{/dist/js/branchcampusvalid.js}"></script>
+    <script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+    <div th:replace="fragments :: scriptjs"></div>
+</div>

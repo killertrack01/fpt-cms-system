@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Fragment Head -->
+<!-- ::::::::::::::: -->
+<head th:fragment="html_head">
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+	<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+	<title>CMS Academy System</title>
+	<!-- CSS files -->
+	<link rel="stylesheet" th:href="@{/dist/css/tabler.min.css}"/>
+	<link rel="stylesheet" th:href="@{/dist/css/tabler-flags.min.css}"/>
+	<link rel="stylesheet" th:href="@{/dist/css/tabler-payments.min.css}"/>
+	<link rel="stylesheet" th:href="@{/dist/css/tabler-vendors.min.css}"/>
+	<link rel="stylesheet" th:href="@{/dist/css/demo.min.css}"/>
+	<!-- Custom CSS   -->
+	<link rel="stylesheet" th:href="@{/dist/css/custom.css}"/>
+	<!-- SweetAlert CSS   -->
+	<link rel="stylesheet" th:href="@{/dist/libs/sweetalert2/dist/sweetalert2.min.css}"/>
+	<!-- Datatable CSS   -->
+	<link rel="stylesheet" th:href="@{/dist/css/jquery.dataTables.min.css}"/>
+	<link rel="stylesheet" th:href="@{/dist/css/responsive.dataTables.min.css}"/>
+	<link rel="stylesheet" th:href="@{/dist/css/buttons.dataTables.min.css}"/>
+	<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">-->
+	<!-- <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.dataTables.min.css">-->
+	<!-- <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">-->
+</head>
+
+<body class="antialiased">
+<!-- Fragment Navbar -->
+<!-- ::::::::::::::: -->
+<header class="navbar navbar-expand-md navbar-dark d-print-none" th:fragment="navbar">
+	<div class="container-fluid">
+		<button class="navbar-toggler" data-bs-target="#navbar-menu" data-bs-toggle="collapse" type="button">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+			<a th:href="@{/admin/dashboard/index}">
+				<img alt="fptlogo" height="auto" th:src="@{/static/LOGO1.png}"
+				     width="230">
+			</a>
+			<span style="margin-left: 2em; font-size: 14px;"><b style="font-size: 20px;">FPT ACADEMY PORTAL</b><br/>Information Technology
+				Department
+				FPT International Training Institute</span>
+		</h1>
+		<div class="navbar-nav flex-row order-md-last">
+			<div class="nav-item dropdown">
+				<a aria-label="Open user menu" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+				   href="#">
+                        <span class="avatar avatar-sm"
+                              style="background-image: url(../../static/avatars/000m.jpg)"></span>
+					<div class="d-none d-xl-block ps-2">
+						<div th:text="${session.staffFullname}"></div>
+						<div class="mt-1 small text-muted">Manager</div>
+					</div>
+				</a>
+				<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+					<a class="dropdown-item" th:href="@{/admin/dashboard/profile}">Profile</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" th:href="@{/logoutstaff}">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- Fragment SubNav -->
+<!-- ::::::::::::::: -->
+<div class="navbar-expand-md sticky-top" th:fragment="subnav">
+	<div class="collapse navbar-collapse" id="navbar-menu">
+		<div class="navbar navbar-light">
+			<div class="container-fluid">
+				<ul class="navbar-nav" id="menu">
+					<!-- Home -->
+					<li class="nav-item">
+						<a class="nav-link text-dark" th:href="@{/admin/dashboard/index}">
+                       <span class="nav-link-icon d-md-none d-lg-inline-block"><svg
+		                         class="icon" fill="none" height="24" stroke="currentColor"
+		                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+		                         width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none" stroke="none"/>
+                                        <polyline points="5 12 3 12 12 3 21 12 19 12"/>
+                                        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/>
+                                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/>
+                                    </svg>
+                       </span><span class="nav-link-title">Home</span>
+						</a>
+					</li>
+					<!-- Student Menu -->
+					<li class="nav-item dropdown">
+						<a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+						   href="#navbar-base" role="button">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block"><svg
+		                                  fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+		                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+		                                  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </span>
+							<span class="nav-link-title">
+                                    Students
+                                </span>
+						</a>
+						<div class="dropdown-menu">
+							<div class="dropdown-menu-columns">
+								<div class="dropdown-menu-column">
+									<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/students}">
+										Student Management
+									</a>
+									<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/studentgroup}">
+										Student Groups
+									</a>
+									<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/studentclass}">
+										Add Student into Student Groups
+									</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/students/importStudent}">
+										Import Students
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- Lecturer Menu -->
+					<li class="nav-item dropdown">
+						<a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+						   href="#navbar-base" role="button">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block"><svg
+		                                  fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+		                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+		                                  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </span>
+							<span class="nav-link-title">
+                                    Lecturers
+                                </span>
+						</a>
+						<div class="dropdown-menu">
+							<div class="dropdown-menu-column">
+								<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/lecturers}">
+									Lecturer Management
+								</a>
+								<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/lecturers/gpa}">
+									GPA of Lecturers Management
+								</a>
+								<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/lecturers/teachinghours}">
+									Teaching Hours of Lecturer Management
+								</a>
+							</div>
+						</div>
+					</li>
+					<!-- Courses & Subjects Menu -->
+					<li class="nav-item dropdown">
+						<a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+						   href="#navbar-extra" role="button">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block"><svg
+		                                  fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+		                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+		                                  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 3h18v18H3zM21 9H3M21 15H3M12 3v18"/>
+                                    </svg>
+                                </span>
+							<span class="nav-link-title">
+                                    Courses & Subjects
+                                </span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/courses}">
+								View List Course
+							</a>
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/subject}">
+								View List Subject
+							</a>
+							<div th:if="${session.role == 1}" class="dropdown-divider"></div>
+							<a th:if="${session.role == 1}" class="dropdown-item text-dark" th:href="@{/admin/dashboard/subject/importSubject}">
+								Import Subjects
+							</a>
+							<a th:if="${session.role == 1}" class="dropdown-item text-dark" th:href="@{/admin/dashboard/courses/importCourse}">
+								Import Courses
+							</a>
+						</div>
+					</li>
+					<!-- Attendance Menu -->
+					<li class="nav-item dropdown">
+						<a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+						   href="#navbar-extra" role="button">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block"><svg
+		                                  class="icon" fill="none" height="24" stroke="currentColor"
+		                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+		                                  width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none" stroke="none"/><polyline
+		                                  points="9 11 12 14 20 6"/><path
+		                                  d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"/></svg>
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+	                                </svg>
+                                </span>
+							<span class="nav-link-title">Attendance</span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" th:href="@{/admin/dashboard/attendance}">
+								Attendance Management
+							</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" th:href="@{/admin/dashboard/attendance/report}">
+								Report Attendance
+							</a>
+						</div>
+					</li>
+					<!-- Timetable Menu -->
+					<li class="nav-item dropdown">
+						<a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+						   href="#navbar-extra" role="button">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block"><svg
+		                                  fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+		                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+		                                  xmlns="http://www.w3.org/2000/svg">
+                                        <rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+                                        <line x1="16" x2="16" y1="2" y2="6"></line>
+                                        <line x1="8" x2="8" y1="2" y2="6"></line>
+                                        <line x1="3" x2="21" y1="10" y2="10"></line>
+                                    </svg>
+                                </span>
+							<span class="nav-link-title">
+                                    Timetable
+                                </span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/timetable}">
+								View Timetable
+							</a>
+						</div>
+					</li>
+					<!-- Exam & Result Menu -->
+					<li class="nav-item dropdown">
+						<a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+						   href="#navbar-extra" role="button">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block"><svg
+		                                  fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+		                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+		                                  xmlns="http://www.w3.org/2000/svg">
+                                        <rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+                                        <line x1="16" x2="16" y1="2" y2="6"></line>
+                                        <line x1="8" x2="8" y1="2" y2="6"></line>
+                                        <line x1="3" x2="21" y1="10" y2="10"></line>
+                                    </svg>
+                                </span>
+							<span class="nav-link-title">Exam Schedules & Results</span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/exams}">
+								Exam Management
+							</a>
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/results}">
+								Result Of Students
+							</a>
+						</div>
+					</li>
+					<!-- Feedback Menu -->
+					<li class="nav-item dropdown">
+						<a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+						   href="#navbar-extra" role="button">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+												<svg class="icon" fill="none" height="24" stroke="currentColor"
+												     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+												     width="24" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 0h24v24H0z" fill="none" stroke="none"/>
+												<path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"/>
+												<path d="M3 6l9 6l9 -6"/><path d="M15 18h6"/><path d="M18 15l3 3l-3 3"/></svg>
+                                </span>
+							<span class="nav-link-title">Feedback</span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/feedbacks}">
+								Feedback Management
+							</a>
+						</div>
+					</li>
+					<!-- Others -->
+					<li class="nav-item dropdown" th:if="${session.role == 1}">
+						<a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+						   href="#navbar-extra" role="button">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/clear-all -->
+												<svg class="icon" fill="none" height="24" stroke="currentColor"
+												     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+												     width="24" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 0h24v24H0z" fill="none" stroke="none"/>
+												<path d="M8 6h12"/><path d="M6 12h12"/><path d="M4 18h12"/></svg>
+                                </span>
+							<span class="nav-link-title">Others</span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/branch}">
+								Branch Management
+							</a>
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/department}">
+								Department Management
+							</a>
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/branchcampus}">
+								Campus Management
+							</a>
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/staffs}">
+								Staff Management
+							</a>
+							<a class="dropdown-item text-dark" th:href="@{/admin/dashboard/role}">
+								Role Management
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fragment Footer -->
+<!-- ::::::::::::::: -->
+<footer class="footer footer-transparent d-print-none" th:fragment="footer">
+	<div class="container-fluid">
+		<div class="row text-center align-items-center flex-row-reverse">
+
+			<div class="col-12 col-lg-auto mt-3 mt-lg-0">
+				<ul class="list-inline list-inline-dots mb-0">
+					<li class="list-inline-item">
+						Copyright &copy; 2021
+						<a class="link-secondary" href=".">GroupWorks</a>.
+						All rights reserved.
+					</li>
+					<li class="list-inline-item">
+						<a class="link-secondary" href="./changelog.html" rel="noopener">v1.0.0</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Fragment Script JS -->
+<!-- ::::::::::::::: -->
+<div th:fragment="scriptjs">
+	<!-- Libs JS -->
+	<script th:src="@{/dist/libs/apexcharts/dist/apexcharts.min.js}"></script>
+	<!-- Tabler Core JS -->
+	<script th:src="@{/dist/js/tabler.min.js}"></script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-revenue-bg'), {
+                    chart: {
+                        type: "area",
+                        fontFamily: 'inherit',
+                        height: 40.0,
+                        sparkline: {
+                            enabled: true
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: .16,
+                        type: 'solid'
+                    },
+                    stroke: {
+                        width: 2,
+                        lineCap: "round",
+                        curve: "smooth",
+                    },
+                    series: [{
+                        name: "Profits",
+                        data: [37, 35, 44, 28, 36, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46, 39, 62, 51, 35, 41, 67]
+                    }],
+                    grid: {
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        type: 'datetime',
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    labels: [
+                        '2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
+                    ],
+                    colors: ["#206bc4"],
+                    legend: {
+                        show: false,
+                    },
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-new-clients'), {
+                    chart: {
+                        type: "line",
+                        fontFamily: 'inherit',
+                        height: 40.0,
+                        sparkline: {
+                            enabled: true
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    stroke: {
+                        width: [2, 1],
+                        dashArray: [0, 3],
+                        lineCap: "round",
+                        curve: "smooth",
+                    },
+                    series: [{
+                        name: "May",
+                        data: [37, 35, 44, 28, 36, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 4, 46, 39, 62, 51, 35, 41, 67]
+                    }, {
+                        name: "April",
+                        data: [93, 54, 51, 24, 35, 35, 31, 67, 19, 43, 28, 36, 62, 61, 27, 39, 35, 41, 27, 35, 51, 46, 62, 37, 44, 53, 41, 65, 39, 37]
+                    }],
+                    grid: {
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        type: 'datetime',
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    labels: [
+                        '2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
+                    ],
+                    colors: ["#206bc4", "#a8aeb7"],
+                    legend: {
+                        show: false,
+                    },
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            var json = [];
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-active-users'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 40.0,
+                        sparkline: {
+                            enabled: true
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '50%',
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [{
+                        name: "Profits",
+                        data: [37, 35, 44, 28, 36, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46, 39, 62, 51, 35, 41, 67]
+                    }],
+                    grid: {
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        type: 'datetime',
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    labels: [
+                        '2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
+                    ],
+                    colors: ["#206bc4"],
+                    legend: {
+                        show: false,
+                    },
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-mentions'), {
+                    chart: {
+                        type: "bar",
+                        fontFamily: 'inherit',
+                        height: 240,
+                        parentHeightOffset: 0,
+                        toolbar: {
+                            show: false,
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                        stacked: true,
+                    },
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '50%',
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [{
+                        name: "Web",
+                        data: [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 2, 12, 5, 8, 22, 6, 8, 6, 4, 1, 8, 24, 29, 51, 40, 47, 23, 26, 50, 26, 41, 22, 46, 47, 81, 46, 6]
+                    }, {
+                        name: "Social",
+                        data: [2, 5, 4, 3, 3, 1, 4, 7, 5, 1, 2, 5, 3, 2, 6, 7, 7, 1, 5, 5, 2, 12, 4, 6, 18, 3, 5, 2, 13, 15, 20, 47, 18, 15, 11, 10, 0]
+                    }, {
+                        name: "Other",
+                        data: [2, 9, 1, 7, 8, 3, 6, 5, 5, 4, 6, 4, 1, 9, 3, 6, 7, 5, 2, 8, 4, 9, 1, 2, 6, 7, 5, 1, 8, 3, 2, 3, 4, 9, 7, 1, 6]
+                    }],
+                    grid: {
+                        padding: {
+                            top: -20,
+                            right: 0,
+                            left: -4,
+                            bottom: -4
+                        },
+                        strokeDashArray: 4,
+                        xaxis: {
+                            lines: {
+                                show: true
+                            }
+                        },
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        type: 'datetime',
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    labels: [
+                        '2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19', '2020-07-20', '2020-07-21', '2020-07-22', '2020-07-23', '2020-07-24', '2020-07-25', '2020-07-26'
+                    ],
+                    colors: ["#206bc4", "#79a6dc", "#bfe399"],
+                    legend: {
+                        show: true,
+                        position: 'bottom',
+                        height: 32,
+                        offsetY: 8,
+                        markers: {
+                            width: 8,
+                            height: 8,
+                            radius: 100,
+                        },
+                        itemMargin: {
+                            horizontal: 8,
+                        },
+                    },
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-activity'), {
+                    chart: {
+                        type: "radialBar",
+                        fontFamily: 'inherit',
+                        height: 40,
+                        width: 40,
+                        animations: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        },
+                    },
+                    tooltip: {
+                        enabled: false,
+                    },
+                    plotOptions: {
+                        radialBar: {
+                            hollow: {
+                                margin: 0,
+                                size: '75%'
+                            },
+                            track: {
+                                margin: 0
+                            },
+                            dataLabels: {
+                                show: false
+                            }
+                        }
+                    },
+                    colors: ["#206bc4"],
+                    series: [35],
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('chart-development-activity'), {
+                    chart: {
+                        type: "area",
+                        fontFamily: 'inherit',
+                        height: 192,
+                        sparkline: {
+                            enabled: true
+                        },
+                        animations: {
+                            enabled: false
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    fill: {
+                        opacity: .16,
+                        type: 'solid'
+                    },
+                    stroke: {
+                        width: 2,
+                        lineCap: "round",
+                        curve: "smooth",
+                    },
+                    series: [{
+                        name: "Purchases",
+                        data: [3, 5, 4, 6, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 8, 4, 14, 30, 17, 19, 15, 14, 25, 32, 40, 55, 60, 48, 52, 70]
+                    }],
+                    grid: {
+                        strokeDashArray: 4,
+                    },
+                    xaxis: {
+                        labels: {
+                            padding: 0
+                        },
+                        tooltip: {
+                            enabled: false
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        type: 'datetime',
+                    },
+                    yaxis: {
+                        labels: {
+                            padding: 4
+                        },
+                    },
+                    labels: [
+                        '2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
+                    ],
+                    colors: ["#206bc4"],
+                    legend: {
+                        show: false,
+                    },
+                    point: {
+                        show: false
+                    },
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-1'), {
+                    chart: {
+                        type: "line",
+                        fontFamily: 'inherit',
+                        height: 24,
+                        animations: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        },
+                    },
+                    tooltip: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 2,
+                        lineCap: "round",
+                    },
+                    series: [{
+                        color: "#206bc4",
+                        data: [17, 24, 20, 10, 5, 1, 4, 18, 13]
+                    }],
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-2'), {
+                    chart: {
+                        type: "line",
+                        fontFamily: 'inherit',
+                        height: 24,
+                        animations: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        },
+                    },
+                    tooltip: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 2,
+                        lineCap: "round",
+                    },
+                    series: [{
+                        color: "#206bc4",
+                        data: [13, 11, 19, 22, 12, 7, 14, 3, 21]
+                    }],
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-3'), {
+                    chart: {
+                        type: "line",
+                        fontFamily: 'inherit',
+                        height: 24,
+                        animations: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        },
+                    },
+                    tooltip: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 2,
+                        lineCap: "round",
+                    },
+                    series: [{
+                        color: "#206bc4",
+                        data: [10, 13, 10, 4, 17, 3, 23, 22, 19]
+                    }],
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-4'), {
+                    chart: {
+                        type: "line",
+                        fontFamily: 'inherit',
+                        height: 24,
+                        animations: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        },
+                    },
+                    tooltip: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 2,
+                        lineCap: "round",
+                    },
+                    series: [{
+                        color: "#206bc4",
+                        data: [6, 15, 13, 13, 5, 7, 17, 20, 19]
+                    }],
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-5'), {
+                    chart: {
+                        type: "line",
+                        fontFamily: 'inherit',
+                        height: 24,
+                        animations: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        },
+                    },
+                    tooltip: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 2,
+                        lineCap: "round",
+                    },
+                    series: [{
+                        color: "#206bc4",
+                        data: [2, 11, 15, 14, 21, 20, 8, 23, 18, 14]
+                    }],
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<script>
+       // @formatter:off
+            document.addEventListener("DOMContentLoaded", function () {
+                window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-6'), {
+                    chart: {
+                        type: "line",
+                        fontFamily: 'inherit',
+                        height: 24,
+                        animations: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        },
+                    },
+                    tooltip: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 2,
+                        lineCap: "round",
+                    },
+                    series: [{
+                        color: "#206bc4",
+                        data: [22, 12, 7, 14, 3, 21, 8, 23, 18, 14]
+                    }],
+                })).render();
+            });
+      // @formatter:on
+	</script>
+	<!-- DataTable JS -->
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
+	<script th:src="@{/dist/js/jquery-3.5.1.js}"></script>
+	<script th:src="@{/dist/libs/datatable/jquery.datatables.min.js}"></script>
+	<script th:src="@{/dist/libs/datatable/datatables.responsive.min.js}"></script>
+	<script th:src="@{/dist/libs/datatable/datatables.buttons.min.js}"></script>
+	<script th:src="@{/dist/libs/datatable/jszip.min.js}"></script>
+	<script th:src="@{/dist/libs/datatable/pdfmake.min.js}"></script>
+	<script th:src="@{/dist/libs/datatable/vfs_fonts.js}"></script>
+	<script th:src="@{/dist/libs/datatable/buttons.html5.min.js}"></script>
+	<script th:src="@{/dist/libs/datatable/buttons.print.min.js}"></script>
+	<script th:src="@{/dist/libs/datatable/buttons.colVis.min.js}"></script>
+	<script type="text/javascript">
+       $(document).ready(function () {
+           $('table.display').DataTable({
+               dom: '<"tabletil">Bfrtip',
+               buttons: [
+                   {
+                       extend: 'excelHtml5',
+                       exportOptions: {
+                           columns: ':visible'
+                       }
+                   },
+                   {
+                       extend: 'pdfHtml5',
+                       exportOptions: {
+                           columns: ':visible'
+                       }
+                   },
+                   'colvis',
+               ],
+           });
+           $("div.tabletil").html('<b>Export Your Report</b>');
+
+
+       });
+
+
+	</script>
+	<!-- <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>-->
+	<!-- <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>-->
+	<!-- <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>-->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>-->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> &ndash;&gt;-->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>-->
+	<!-- <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>-->
+	<!-- <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>-->
+	<!-- <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"></script>-->
+</div>
+</body>
+</html>

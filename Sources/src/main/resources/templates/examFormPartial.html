@@ -1,0 +1,235 @@
+<div th:fragment="examCreate">
+    <form id="formCreate">
+        <div class="form-row mb-2 row">
+            <div class="col">
+                <label for="examcodelogin" class="form-label">Examcode login</label>
+                <input type="text"  class="form-control" id="examcodelogin" placeholder="examcodelogin" />
+                <small></small>
+            </div>
+        </div>
+
+        <div class="form-row mb-2 row">
+            <div class="col-5">
+                <label for="Courses" class="form-label">Courses</label>
+                <select class="form-control" id="Courses"  placeholder="Courses">
+                </select>
+                <small></small>
+            </div>
+            <div class="col-7">
+                <label for="stugroid" class="form-label">Student Group</label>
+                <select class="form-control" id="stugroid" placeholder="stugroid">
+                    <option value="" disabled selected>select Student Group</option>
+                </select>
+                <small></small>
+            </div>
+        </div>
+        <div class="form-row mb-2 row">
+            <div class="col-6">
+                <label for="Semester" class="form-label">Semester</label>
+                <select class="form-control" id="Semester" placeholder="Semester">
+                    <option value="" disabled selected>select semester</option>
+                </select>
+                <small></small>
+            </div>
+            <div class="col-6">
+                <div class="d-flex justify-content-between">
+                    <label for="subjdetailsid" class="form-label">Subject</label>
+                    <span class="text-danger" id="subjenddate"></span>
+                </div>
+                <select class="form-control" id="subjdetailsid" placeholder="subjdetailsid">
+                    <option value="" disabled selected>select subject</option>
+                </select>
+                <small></small>
+            </div>
+        </div>
+        <div class="form-row mb-2 row">
+            <div class="col-6">
+                <label for="examtime" class="form-label">Exam time</label>
+                <select class="form-control" id="examtime">
+                    <option value="" selected disabled>Select exam time</option>
+                    <!-- SESSION 1 -->
+                    <option value=""  disabled>---SESSION 1---</option>
+                    <option value="8:00" >8:00</option>
+                    <option value="8:15" >8:15</option>
+                    <option value="8:30" >8:30</option>
+                    <option value="8:45" >8:45</option>
+                    <option value="9:00" >9:00</option>
+                    <option value="9:15" >9:15</option>
+                    <option value="9:30" >9:30</option>
+                    <option value="9:45" >9:45</option>
+                    <!-- SESSION 2 -->
+                    <option value="" disabled>---SESSION 2---</option>
+                    <option value="10:00" >10:00</option>
+                    <option value="10:15" >10:15</option>
+                    <option value="10:30" >10:30</option>
+                    <option value="10:45" >10:45</option>
+                    <option value="11:00" >11:00</option>
+                    <!-- SESSION 3 -->
+                    <option value="" disabled>---SESSION 3---</option>
+                    <option value="13:30" >13:30</option>
+                    <option value="13:45" >13:45</option>
+                    <option value="14:00" >14:00</option>
+                    <option value="14:15" >14:15</option>
+                    <option value="14:30" >14:30</option>
+                    <option value="14:45" >14:45</option>
+                    <option value="15:00" >15:00</option>
+                    <option value="15:15" >15:15</option>
+                    <!-- SESSION 4 -->
+                    <option value="" disabled>---SESSION 4---</option>
+                    <option value="15:30" >15:30</option>
+                    <option value="15:45" >15:45</option>
+                    <option value="16:00" >16:00</option>
+                    <option value="16:15" >16:15</option>
+                    <option value="16:30" >16:30</option>
+                    <option value="16:45" >16:45</option>
+                    <option value="17:00" >17:00</option>
+                    <option value="17:15" >17:15</option>
+                    <!-- SESSION 5 -->
+                    <option value="" disabled>---SESSION 5---</option>
+                    <option value="18:00" >18:00</option>
+                </select>
+                <small></small>
+            </div>
+            <div class="col-6">
+                <label for="examday" class="form-label">Exam day</label>
+                <input type="date" class="form-control" id="examday" placeholder="examday"/>
+                <small></small>
+            </div>
+        </div>
+        <div class="form-row mb-4 row">
+            <div class="col-4">
+                <label for="examtype" class="form-label">Exam type</label>
+                <select class="form-control" id="examtype">
+                    <option value="" selected disabled>Select Exam Type</option>
+                </select>
+                <small></small>
+            </div>
+            <div class="col-4">
+                <label for="bout" class="form-label">Bout</label>
+                <input type="text"  class="form-control" readonly id="bout" placeholder="Auto Generated" />
+                <small></small>
+            </div>
+            <div class="col-4">
+                <label for="roomid" class="form-label">Room</label>
+                <select class="form-select" id="roomid">
+                    <option value="" selected disabled>--- Select room ---</option>
+                    <option th:each="r:${roomlist}" th:value="${r.roomid}" th:text="${r.roomnm}"></option>
+                    <small></small>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="form-row mb-4 row">
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary " value="Create Exam">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+</div>
+<div th:fragment="examEdit">
+    <form id="EditExam">
+        <input type="text" hidden class="form-control" id="editexamid"/>
+        <input type="text" hidden class="form-control" id="editstugroup"/>
+        <input type="text" hidden class="form-control" id="editsubjdetailsid"/>
+        <input type="text" hidden class="form-control" id="editexamtype"/>
+        <div class="form-row mb-2 row">
+            <div class="col-6">
+                <label for="editstugronm" class="form-label">Student Group</label>
+                <input disabled type="text" class="form-control" id="editstugronm"/>
+            </div>
+            <div class="col-6">
+                <div class="d-flex justify-content-between">
+                    <label for="editsubjectnm" class="form-label">Subject</label>
+                    <span class="text-danger" id="editsubjenddate"></span>
+                </div>
+                <input disabled type="text" class="form-control" id="editsubjectnm"/>
+            </div>
+        </div>
+        <div class="form-row mb-2 row">
+            <div class="col-8">
+                <label for="editexamcodelogin" class="form-label">Examcode login</label>
+                <input type="text"  class="form-control" id="editexamcodelogin" placeholder="examcodelogin" />
+                <small></small>
+            </div>
+            <div class="col-4">
+                <label for="roomid" class="form-label">Room</label>
+                <select class="form-select" id="editroomid">
+                    <option value="" selected disabled>--- Select room ---</option>
+                    <option th:each="r:${roomlist}" th:value="${r.roomid}" th:text="${r.roomnm}"></option>
+                </select>
+                <small></small>
+            </div>
+        </div>
+        <div class="form-row mb-2 row">
+            <div class="col-6">
+                <label for="editexamtime" class="form-label">Exam time</label>
+                <select class="form-select" id="editexamtime">
+                    <option value="" selected disabled>Select exam time</option>
+                    <!-- SESSION 1 -->
+                    <option value=""  disabled>---SESSION 1---</option>
+                    <option value="8:00" >8:00</option>
+                    <option value="8:15" >8:15</option>
+                    <option value="8:30" >8:30</option>
+                    <option value="8:45" >8:45</option>
+                    <option value="9:00" >9:00</option>
+                    <option value="9:15" >9:15</option>
+                    <option value="9:30" >9:30</option>
+                    <option value="9:45" >9:45</option>
+                    <!-- SESSION 2 -->
+                    <option value="" disabled>---SESSION 2---</option>
+                    <option value="10:00" >10:00</option>
+                    <option value="10:15" >10:15</option>
+                    <option value="10:30" >10:30</option>
+                    <option value="10:45" >10:45</option>
+                    <option value="11:00" >11:00</option>
+                    <!-- SESSION 3 -->
+                    <option value="" disabled>---SESSION 3---</option>
+                    <option value="13:30" >13:30</option>
+                    <option value="13:45" >13:45</option>
+                    <option value="14:00" >14:00</option>
+                    <option value="14:15" >14:15</option>
+                    <option value="14:30" >14:30</option>
+                    <option value="14:45" >14:45</option>
+                    <option value="15:00" >15:00</option>
+                    <option value="15:15" >15:15</option>
+                    <!-- SESSION 4 -->
+                    <option value="" disabled>---SESSION 4---</option>
+                    <option value="15:30" >15:30</option>
+                    <option value="15:45" >15:45</option>
+                    <option value="16:00" >16:00</option>
+                    <option value="16:15" >16:15</option>
+                    <option value="16:30" >16:30</option>
+                    <option value="16:45" >16:45</option>
+                    <option value="17:00" >17:00</option>
+                    <option value="17:15" >17:15</option>
+                    <!-- SESSION 5 -->
+                    <option value="" disabled>---SESSION 5---</option>
+                    <option value="18:00" >18:00</option>
+                </select>
+                <small></small>
+            </div>
+            <div class="col-6">
+                <label for="examday" class="form-label">Exam day</label>
+                <input type="date" class="form-control" id="editexamday" placeholder="examday"/>
+                <small></small>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-row mb-4 row">
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary " value="Edit Exam">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+   <title>Lecturer Dashboard</title>
+</head>
+
+<body class="antialiased">
+
+   <div class="page">
+      <!-- Include Navbar -->
+      <header th:replace="lec-fragments :: lecnavbar"></header>
+      <div th:replace="lec-fragments :: lecsubnav"></div>
+      <div class="content">
+         <div class="container-fluid">
+            <!-- Page title -->
+            <div class="page-header d-print-none">
+               <div class="row align-items-center">
+                  <div class="col">
+                     <!-- Page pre-title -->
+                     <div class="page-pretitle">
+                        Overview
+                     </div>
+                     <h2 class="page-title">
+                        Dashboard Lecturer
+                     </h2>
+                     <span th:text="${session.lecturerroll}"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="row row-deck row-cards">
+               <div class="col-lg-4">
+                  <div class="row row-cards">
+                     <div class="col-12">
+                        <div class="card shadow border-0">
+                           <div class="card-status-start bg-info "></div>
+                           <div class="card-body">
+                              <h3 class="card-title text-uppercase">Attendance</h3>
+                              <hr style="margin: 1em;">
+                              <div class="group-items">
+                                 <a th:href="@{/lecturer/dashboard/attendance}" class="btn btn-vk btn-md"><svg xmlns="http://www.w3.org/2000/svg"
+                                       class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                       stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                       <circle cx="5" cy="9" r="1" />
+                                       <circle cx="5" cy="15" r="1" />
+                                       <circle cx="12" cy="9" r="1" />
+                                       <circle cx="12" cy="15" r="1" />
+                                       <circle cx="19" cy="9" r="1" />
+                                       <circle cx="19" cy="15" r="1" />
+                                    </svg> Take a attendance for day</a>
+                                 <a th:href="@{/lecturer/dashboard/attendance/report}" class="btn btn-google btn-md"><svg xmlns="http://www.w3.org/2000/svg"
+                                       class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                       stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                       <circle cx="5" cy="9" r="1" />
+                                       <circle cx="5" cy="15" r="1" />
+                                       <circle cx="12" cy="9" r="1" />
+                                       <circle cx="12" cy="15" r="1" />
+                                       <circle cx="19" cy="9" r="1" />
+                                       <circle cx="19" cy="15" r="1" />
+                                    </svg> See report on student attendance</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="row row-cards">
+                     <div class="col-12">
+                        <div class="card shadow border-0">
+                           <div class="card-status-start bg-info "></div>
+                           <div class="card-body">
+                              <h3 class="card-title text-uppercase">Teaching Hours</h3>
+                              <hr style="margin: 1em;">
+                              <div class="group-items">
+                                 <a th:href="@{/lecturer/dashboard/teachinghours/report}" class="btn btn-vk btn-md"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                               class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                                                                               stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <circle cx="5" cy="9" r="1" />
+                                    <circle cx="5" cy="15" r="1" />
+                                    <circle cx="12" cy="9" r="1" />
+                                    <circle cx="12" cy="15" r="1" />
+                                    <circle cx="19" cy="9" r="1" />
+                                    <circle cx="19" cy="15" r="1" />
+                                 </svg>Teaching Hours Of Lecturer</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="row row-cards">
+                     <div class="col-12">
+                        <div class="card shadow border-0">
+                           <div class="card-status-start bg-info "></div>
+                           <div class="card-body">
+                              <h3 class="card-title text-uppercase">Students</h3>
+                              <hr style="margin: 1em;">
+                              <div class="group-items">
+                                 <a th:href="@{/lecturer/dashboard/studentgroups}" class="btn btn-vk btn-md"><svg xmlns="http://www.w3.org/2000/svg"
+                                       class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                       stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                       <circle cx="5" cy="9" r="1" />
+                                       <circle cx="5" cy="15" r="1" />
+                                       <circle cx="12" cy="9" r="1" />
+                                       <circle cx="12" cy="15" r="1" />
+                                       <circle cx="19" cy="9" r="1" />
+                                       <circle cx="19" cy="15" r="1" />
+                                    </svg> Student Groups</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="row row-cards">
+                     <div class="col-12">
+                        <div class="card shadow border-0">
+                           <div class="card-status-start bg-info "></div>
+                           <div class="card-body">
+                              <h3 class="card-title text-uppercase">Courses</h3>
+                              <hr style="margin: 1em;">
+                              <div class="group-items">
+                                 <a th:href="@{/lecturer/dashboard/courses}" class="btn btn-vk btn-md"><svg xmlns="http://www.w3.org/2000/svg"
+                                       class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                       stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                       <circle cx="5" cy="9" r="1" />
+                                       <circle cx="5" cy="15" r="1" />
+                                       <circle cx="12" cy="9" r="1" />
+                                       <circle cx="12" cy="15" r="1" />
+                                       <circle cx="19" cy="9" r="1" />
+                                       <circle cx="19" cy="15" r="1" />
+                                    </svg> View Courses</a><br>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="row row-cards">
+                     <div class="col-12">
+                        <div class="card shadow border-0">
+                           <div class="card-status-start bg-info "></div>
+                           <div class="card-body">
+                              <h3 class="card-title text-uppercase">Subjects</h3>
+                              <hr style="margin: 1em;">
+                              <div class="group-items">
+                                 <a th:href="@{/lecturer/dashboard/subject}" class="btn btn-vk btn-md"><svg xmlns="http://www.w3.org/2000/svg"
+                                       class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                       stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                       <circle cx="5" cy="9" r="1" />
+                                       <circle cx="5" cy="15" r="1" />
+                                       <circle cx="12" cy="9" r="1" />
+                                       <circle cx="12" cy="15" r="1" />
+                                       <circle cx="19" cy="9" r="1" />
+                                       <circle cx="19" cy="15" r="1" />
+                                    </svg> View All Subjects</a><br>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer th:replace="fragments :: footer"></footer>
+      </div>
+   </div>
+   <div th:replace="fragments :: scriptjs"></div>
+</body>
+
+</html>

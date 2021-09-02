@@ -1,0 +1,166 @@
+<div th:fragment="staffCreate">
+    <form id="createStaffForm" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-row mb-2 row">
+                <!-- Roll number -->
+                <div class="col-6">
+                    <label class="form-label">Roll Number</label>
+                    <input type="text" class="form-control" id="rollnum" name="rollnum" placeholder="Enter roll number">
+                    <small></small>
+                </div>
+                <!-- Full name -->
+                <div class="col-6">
+                    <label class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="fullname" name="fullnm" placeholder="Enter fullname">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Address -->
+                <div class="col-12">
+                    <label class="form-label">Address</label>
+                    <input type="text" class="form-control " id="address" name="address" placeholder="Enter last name">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Email -->
+                <div class="col-6">
+                    <label class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email@gmail.com">
+                    <small></small>
+                </div>
+
+                <!-- College email -->
+                <div class="col-6">
+                    <label class="form-label">CompanyEmail email</label>
+                    <input type="text" class="form-control" id="companyemail" name="companyemail"
+                           placeholder="CompanyEmail@gmail.com">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Day of birth -->
+                <div class="col-4">
+                    <label class="form-label">Day of birth</label>
+                    <input type="date" id="dob" name="dob" class="form-control">
+                    <small></small>
+                </div>
+                <!-- Gender -->
+                <div class="col-4">
+                    <label class="form-label">Gender</label>
+                    <select id="gender" name="gender" class="form-select">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small></small>
+                </div>
+                <!-- Mobile phone -->
+                <div class="col-4">
+                    <label class="form-label">Mobile phone</label>
+                    <input type="text" class="form-control" id="mobilephone" name="phone"
+                           placeholder="Enter mobile phone">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-4 row">
+                <!-- Avatar -->
+                <div>
+                    <label class="form-label">Avatar</label>
+                    <input type="file" id="avatar" name="img" class="form-control">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Identity</h1>
+            <hr>
+            <div class="form-row mb-4 row">
+                <!-- Id card -->
+                <div class="col-4">
+                    <label class="form-label">Id card number</label>
+                    <input type="text" class="form-control" id="idcard" name="idcard"
+                           placeholder="Enter id card number">
+                    <small></small>
+                </div>
+                <!-- day issue -->
+                <div class="col-4">
+                    <label class="form-label">Date issue</label>
+                    <input type="date" id="dateissue" name="doi" class="form-control">
+                    <small></small>
+                </div>
+                <!-- place issue -->
+                <div class="col-4">
+                    <label class="form-label">Place issue</label>
+                    <input type="text" class="form-control" id="placeissue" name="poi" placeholder="Enter place issue ">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Major</h1>
+            <hr>
+            <div class="form-row mb-4 row">
+                <!-- Contract -->
+                <div class="col-4">
+                    <label class="form-label">Staff Contract</label>
+                    <input type="text" class="form-control" id="contract" name="contract"
+                           placeholder="Enter Staff's Contract">
+                    <small></small>
+                </div>
+                <!-- Depid -->
+                <div class="col-4">
+                    <label class="form-label">Department</label>
+                    <select id="depid" name="depid" class="form-select">
+                        <option value="">Select Department</option>
+                        <option th:each="d : ${listDept}" th:value="${d.getDepid()}" th:text="${d.getDepnm()}"></option>
+                    </select>
+                    <small></small>
+                </div>
+                <div class="col-4">
+                    <label class="form-label">RoleID</label>
+                    <select id="roleid" name="roleid" class="form-select">
+                        <option value="">Select Role</option>
+                        <option th:each="r : ${listRole}" th:value="${r.getRoleid()}" th:text="${r.getRolenm()}"></option>
+                    </select>
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-4 row">
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">CLOSE</button>
+                    <input type="submit" class="btn btn-primary " value="SAVE">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div th:fragment="staffEdit">
+    <form id="editStaffForm" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-row mb-2 row">
+                <input type="hidden" class="form-control" id="staffid">
+                <!-- Old Roll number -->
+                <div class="col-6">
+                    <label class="form-label">Current RollNumber</label>
+                    <input type="text" class="form-control" readonly id="currentrollnum">
+                    <small></small>
+                </div>
+                <!-- New Roll number-->
+                <div class="col-6">
+                    <label class="form-label">New RollNumber</label>
+                    <input type="text" class="form-control" id="editrollnum" name="rollnum" placeholder="Enter fullname">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-4 row">
+                <div class="d-flex justify-content-end">
+                    <input type="submit" class="btn btn-primary " value="UPDATE">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

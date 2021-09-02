@@ -1,0 +1,180 @@
+<div th:fragment="feedbackCreate">
+	<form id="formCreate">
+		<div class="form-row mb-2 row">
+			<div class="col-4">
+				<label class="form-label" for="Courses">Courses</label>
+				<select
+						  class="form-select form-check"
+						  id="Courses"
+						  placeholder="Courses"
+				></select>
+				<small></small>
+			</div>
+			<div class="col-4">
+				<label class="form-label" for="stugroid">Student Group</label>
+				<select
+						  class="form-select"
+						  id="stugroid"
+						  placeholder="stugroid"
+				></select>
+				<small></small>
+			</div>
+			<div class="col-4">
+				<label class="form-label" for="Semester">Semester</label>
+				<select
+						  class="form-select"
+						  id="Semester"
+						  placeholder="Semester"
+				></select>
+				<small></small>
+			</div>
+		</div>
+		<div class="form-row mb-2 row">
+			<div class="col-7">
+				<label class="form-label" for="subjdetailsid">Subject</label>
+				<select
+						  class="form-select"
+						  id="subjdetailsid"
+						  placeholder="subjdetailsid"
+				></select>
+				<small></small>
+			</div>
+			<div class="col-5">
+				<label class="form-label" for="Lecturer">Lecturer</label>
+				<select
+						  class="form-select"
+						  id="Lecturer"
+						  placeholder="Lecturer"
+				></select>
+				<small></small>
+			</div>
+		</div>
+		<div class="form-row mt-lg-5 mb-4 row">
+			<div class="col-5">
+				<h3>Name Feedback</h3>
+			</div>
+			<div class="col-7">
+				<input
+						  class="form-control-plaintext"
+						  id="namefeedback"
+						  name="namefeedback"
+						  readonly
+						  type="text"
+				/>
+			</div>
+		</div>
+		<div class="form-row mb-4 row">
+			<div class="col-5">
+				<h3>Date Feedback</h3>
+			</div>
+			<div class="col-7">
+				<input
+						  class="form-control"
+						  id="datefeedback"
+						  name="datefeedback"
+						  type="date"
+						  readonly
+				/>
+				<small id="smalldatefeedback" class="text-danger"></small>
+			</div>
+		</div>
+		<div class="form-row mb-4 row">
+			<div class="col-5">
+				<h3>End Date</h3>
+			</div>
+			<div class="col-7">
+				<input
+						  class="form-control"
+						  id="enddatefeedback"
+						  name="enddatefeedback"
+						  type="date"
+						  readonly
+				/>
+				<small id="smallenddatefeedback" class="text-danger"></small>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-row mb-4 row">
+				<div class="d-flex justify-content-between">
+					<button class="btn me-auto" data-bs-dismiss="modal" type="button">
+						Close
+					</button>
+					<input class="btn btn-primary" type="submit" value="Submit"/>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div th:fragment="feedbackEdit">
+	<form id="formEdit">
+		<input id="editfeedbackid" name="feedbackid" type="hidden"/>
+		<input id="editCourses" type="hidden"/>
+		<input id="editSemester" type="hidden"/>
+		<input id="editstugroid" type="hidden"/>
+		<div class="form-row mb-lg-4 row">
+			<div class="col-7">
+				<label class="form-label" for="editsubjdetailsid">Subject</label>
+				<select class="form-select" id="editsubjdetailsid"></select>
+				<small></small>
+			</div>
+			<div class="col-5">
+				<label class="form-label" for="editLecturer">Lecturer</label>
+				<select class="form-select" id="editLecturer"></select>
+				<small></small>
+			</div>
+		</div>
+		<div class="form-row mb-lg-4 row">
+			<div class="col-5">
+				<h3>Name Feedback:</h3>
+			</div>
+			<div class="col-7">
+				<input
+						  class="form-control-plaintext"
+						  id="editnamefeedback"
+						  name="namefeedback"
+						  readonly
+						  type="text"
+				/>
+			</div>
+		</div>
+		<div class="form-row mb-lg-4 row">
+			<div class="col-5">
+				<h3>Date Feedback:</h3>
+			</div>
+			<div class="col-7">
+				<input
+						  class="form-control"
+						  id="editdatefeedback"
+						  name="datefeedback"
+						  type="date"
+				/>
+				<small id="editsamlldatefeedback"></small>
+			</div>
+		</div>
+		<div class="form-row mb-4 row">
+			<div class="col-5">
+				<h3>End Date</h3>
+			</div>
+			<div class="col-7">
+				<input
+						  class="form-control"
+						  id="editenddatefeedback"
+						  name="enddatefeedback"
+						  type="date"
+				/>
+				<small id="smalleditenddatefeedback" class="text-danger"></small>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-row mb-lg-4 row">
+				<div class="d-flex justify-content-between">
+					<button class="btn me-auto" data-bs-dismiss="modal" type="button">
+						Close
+					</button>
+					<input class="btn btn-primary" type="submit" value="Submit"/>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

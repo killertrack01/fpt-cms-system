@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+    <title>Login Portal - FPT Academy Portal</title>
+</head>
+
+<body class="antialiased ">
+<div class="flex-fill d-flex flex-column justify-content-center py-4 welcome-bg">
+    <div class="container-tight py-6 wel-box">
+        <div class="text-center mb-2 py-5">
+            <div class="col-12 col-sm-4 col-md-2 col-xl-auto mb-3">
+                <h1><span style="font-size:14px;">WELCOME</span><br/>LOGIN PORT<br/>FPT ACADEMY PORTAL</h1>
+            </div>
+            <div class="col-12 col-sm-4 col-md-2 col-xl-auto mb-3">
+                <a href="#"><img  th:src="@{/static/fu_banner.jpeg}" height="120" alt=""></a>
+            </div>
+            <div class="col-12 col-sm-4 col-md-2 col-xl-auto mb-3">
+               <span>Timezone: </span><span id="time"></span>
+            </div>
+            <!-- Admin Port -->
+            <div class="col-12 col-sm-4 col-md-2 col-xl-auto mb-3">
+                <a th:href="@{admin/dashboard/login}" class="btn btn-light btn-square w-100 btnpo" >
+                    <img  th:src="@{/dist/img/icons/team.png}" height="40" alt="">
+                    <span style="margin-left: 20px;">ADMIN</span>
+                </a>
+            </div>
+            <!-- Lecturer Port -->
+            <div class="col-12 col-sm-4 col-md-2 col-xl-auto mb-3">
+                <a th:href="@{lecturer/dashboard/login}" class="btn btn-light btn-square w-100 btnpo">
+                    <img  th:src="@{/dist/img/icons/lecture.png}" height="40" alt="">
+                    <span style="margin-left: 20px;">LECTURER</span>
+                </a>
+            </div>
+            <!-- Student Port -->
+            <div class="col-12 col-sm-4 col-md-2 col-xl-auto mb-3">
+                <a th:href="@{students/dashboard/login}" class="btn btn-light btn-square w-100 btnpo">
+                    <img  th:src="@{/dist/img/icons/cap.png}" height="40" alt="">
+                    <span style="margin-left: 20px;">STUDENT</span>
+                </a>
+            </div>
+            <!-- Parent Port -->
+            <div class="col-12 col-sm-4 col-md-2 col-xl-auto mb-3">
+                <a th:href="@{parent/dashboard/login}" class="btn btn-light btn-square w-100 btnpo">
+                    <img  th:src="@{/dist/img/icons/family-insurance.png}" height="40" alt="">
+                    <span style="margin-left: 20px;">PARENT</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/dist/js/login.js}"></script>
+<div th:replace="fragments :: scriptjs"></div>
+<script>
+    var timeDisplay = document.getElementById("time");
+    function refreshTime() {
+        var dateString = new Date().toLocaleString("en-US", {timeZone: "Asia/Ho_Chi_Minh"});
+        var formattedString = dateString.replace(", ", " - ");
+        timeDisplay.innerHTML = formattedString;
+    }
+    setInterval(refreshTime, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!-- Modal Create department -->
+<div th:fragment="departmentCreate">
+    <div class="modal modal-blur fade show" id="createDepartment" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">New Department</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newdepartment">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="create_DepartName">Department name</label>
+                                        <input type="text" id="create_DepartName" name="name" class="form-control" placeholder="Input new Department name">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-4">
+                                        <label class="form-label" for="create_Description">Description</label>
+                                        <textarea id="create_Description" name="description" class="form-control" placeholder="Input description"></textarea>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="Create new department">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal Update department -->
+<div th:fragment="departmentEdit">
+    <div class="modal modal-blur fade show" id="updatedepart" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">Department</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateDepartment">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <input type="hidden" id="edit_id" name="edit_id">
+                                        <label class="form-label" for="edit_DepartName">Department name</label>
+                                        <input type="text" id="edit_DepartName" name="depnm" class="form-control">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="edit_Description">Description</label>
+                                        <textarea id="edit_Description" name="descriptions" class="form-control" placeholder="Input description"></textarea>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="edit department">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Scripts -->
+<div th:fragment="departmentScripts">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script th:src="@{/dist/js/departmentvalid.js}"></script>
+    <script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+    <div th:replace="fragments :: scriptjs"></div>
+</div>

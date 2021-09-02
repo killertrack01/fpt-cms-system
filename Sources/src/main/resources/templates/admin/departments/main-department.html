@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+    <title>Department List - Dashboard</title>
+</head>
+
+<body class="antialiased">
+    <div class="page">
+        <!-- Include Navbar -->
+        <header th:replace="fragments :: navbar"></header>
+        <div th:replace="fragments :: subnav"></div>
+        <div class="content">
+            <div class="container-fluid">
+                <!-- Page title -->
+                <div class="d-print-none">
+                    <div class="row align-items-center">
+                        <!-- Page title actions -->
+                        <div class="page-header d-print-none">
+                            <div class="row ">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="page-title">
+                                        Department Management
+                                    </h2>
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createDepartment">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                             fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <circle cx="12" cy="12" r="9" />
+                                            <line x1="9" y1="12" x2="15" y2="12" />
+                                            <line x1="12" y1="9" x2="12" y2="15" /></svg>
+                                        Add New Department
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cards">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="table-responsive">
+                                <table id="tabledb1" class="table table-vcenter table-bordered card-table table-striped display">
+                                    <thead>
+                                        <tr>
+                                            <th>Department Id</th>
+                                            <th>Department Name</th>
+                                            <th>Description</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="c:${list}">
+                                            <td th:text="${c.getDepid()}"></td>
+                                            <td th:text="${c.getDepnm()}"></td>
+                                            <td th:text="${c.getDescriptions()}"></td>
+                                            <td>
+                                                <button class="btn btn-vk btn-icon" id="editdepartbtn" data-bs-toggle="modal" data-bs-target="#updatedepart" onclick="doUpdateDepart(this)">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
+                                                        height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path
+                                                            d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                                                        <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                                                        <line x1="16" y1="5" x2="19" y2="8" />
+                                                    </svg>
+                                                    <input type="hidden" id="" th:value="${c.getDepid()}">
+                                                </button>
+                                                <button class="btn btn-google btn-icon" id="deletedepartbtn" onclick=" deletedepart(this)">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
+                                                        height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M15 3v4a1 1 0 0 0 1 1h4" />
+                                                        <path
+                                                            d="M17 17h-6a2 2 0 0 1 -2 -2v-6m0 -4a2 2 0 0 1 2 -2h4l5 5v7c0 .294 -.063 .572 -.177 .823" />
+                                                        <path
+                                                            d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2" />
+                                                        <line x1="3" y1="3" x2="21" y2="21" />
+                                                    </svg>
+                                                    <input type="hidden" th:value="${c.getDepid()}">
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer th:replace="fragments :: footer"></footer>
+        </div>
+    </div>
+    <!-- Modal create Department -->
+    <div th:replace="departmentFormPartial :: departmentCreate"></div>
+    <!-- Model update Department -->
+    <div th:replace="departmentFormPartial :: departmentEdit"></div>
+    <!-- Department Scripts -->
+    <div th:replace="departmentFormPartial :: departmentScripts"></div>
+</body>
+</html>

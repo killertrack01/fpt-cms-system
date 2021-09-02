@@ -1,0 +1,216 @@
+<div th:fragment="lecturerformpartial">
+    <form id="create_lecturer" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="mb-3">
+                    <div class="form-field">
+                        <label for="rollnum">Roll Number</label>
+                        <input class="form-control" id="rollnum" placeholder="RollNumber" name="rollnum" type="text">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="mb-3">
+                    <div class="form-field">
+                        <label for="funm">Full Name</label>
+                        <input class="form-control" id="fullnm" placeholder="FullName" name="fullnm" type="text">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 mb-3">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="addrnm">Address</label>
+                        <input class="form-control" placeholder="590 CMT8 District 3" id="address" name="address" type="text">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="form-field">
+                    <label for="dob">Birth</label>
+                    <input class="form-control" id="dob" name="dob" type="date">
+                    <small style="color: red;"></small>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="phone">Phone</label>
+                        <input class="form-control" placeholder="0123456789" id="phone" name="phone" type="text">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="gender">Gender</label>
+                        <select class="form-select mb-0" id="gender" name="gender" aria-label="Gender select example">
+                            <option value="">Select Gender</option>
+                            <option th:each="g : ${genders}" th:value="${g}" th:text="${g}"></option>
+                        </select>
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input class="form-control" id="email" name="email" type="email" placeholder="name@company.com">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <div class="form-field">
+                        <label for="companyemail">Company Email</label>
+                        <input class="form-control" id="companyemail" name="companyemail" type="email" placeholder="name@company.com">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mb-4">
+                    <div class="form-field">
+                        <label class="form-label" for="file">Image</label>
+                        <input type="file" class="form-control" id="file" name="file"/>
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Identity</h1>
+            <hr>
+            <div class="col-lg-4">
+                <div class="mb-3">
+                    <div class="form-group">
+                        <div class="form-field">
+                            <label for="idcard">IDCard</label>
+                            <input class="form-control" id="idcard" placeholder="Enter IDCard" name="idcard" type="text">
+                            <small style="color: red;"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mb-3">
+                    <div class="form-field">
+                        <label for="doi">Date Of Issue</label>
+                        <input class="form-control" id="doi" name="doi" type="date">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mb-3">
+                    <div class="form-field">
+                        <label for="poi">Place Of Issue</label>
+                        <input class="form-control" id="poi" placeholder="Place Of Issue" name="poi" type="text">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Major</h1>
+            <hr>
+            <div class="col-sm-4 mb-3">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="contract">Contract</label>
+                        <input class="form-control" id="contract" placeholder="Contract" name="contract" type="text">
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mb-3">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="major">Major</label>
+                        <select class="form-select mb-0" id="major" name="major" aria-label="Gender select example">
+                            <option value="">Select Major</option>
+                            <option th:each="m : ${majors}" th:value="${m.getBranchnm()}" th:text="${m.getBranchnm()}"></option>
+                        </select>
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="lecturertype">Lecturer Type</label>
+                        <select class="form-select mb-0" id="lecturertype" name="lecturertype" aria-label="Gender select example">
+                            <option value="">Options</option>
+                            <option th:each="t : ${types}" th:value="${t}" th:text="${t}"></option>
+                        </select>
+                        <small style="color: red;"></small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="mt-2 d-flex justify-content-between">
+                <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                    Cancel
+                </a>
+                <input type="submit" value="Save changes" class="btn btn-primary"/>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<div th:fragment="searchStudentGroup">
+    <div class="row">
+        <!-- Select Option -->
+        <div class="col-auto">
+            <div class="mb-3">
+                <select id="optionSearchSG" class="form-select" aria-label="Default select example">
+                    <option value="allOptionSearchSG" selected>All</option>
+                    <option value="CoursesOptionSearchSG">Courses</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-auto">
+            <div class="mb-3">
+                <div class="row">
+                    <!-- Branch -->
+                    <div class="col-auto" id="divBranchStudentGroupS"><select class="form-control"
+                                                                              id="BranchStudentGroupS"></select></div>
+                    <!-- Courses -->
+                    <div class="col-auto" id="divCoursesStudentGroupS"><select class="form-control"
+                                                                               id="CoursesStudentGroupS"></select></div>
+                </div>
+            </div>
+        </div>
+        <!-- Submit -->
+        <div class="col-auto">
+            <div class="mb-3">
+                <button type="button" id="btnSearchStudentGroup" class="btn btn-instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                         stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <circle cx="10" cy="10" r="7" />
+                        <line x1="21" y1="21" x2="15" y2="15" />
+                    </svg> Search</button>
+            </div>
+        </div>
+    </div>

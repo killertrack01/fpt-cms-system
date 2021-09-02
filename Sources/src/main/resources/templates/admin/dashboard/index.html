@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+   <title>Dashboard</title>
+<!--   <style src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"></style>-->
+</head>
+
+<body class="antialiased">
+   <div class="page">
+      <!-- Include Navbar -->
+      <header th:replace="fragments :: navbar"></header>
+      <div th:replace="fragments :: subnav"></div>
+      <div class="content">
+         <div class="container-fluid">
+            <!-- Page title -->
+            <div class="page-header d-print-none">
+               <div class="row align-items-center">
+                  <div class="col">
+                     <!-- Page pre-title -->
+                     <div class="page-pretitle">
+                        Overview
+                     </div>
+                     <h2 class="page-title">
+                        Dashboard Admin
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row row-deck row-cards">
+               <div class="col-sm-6 col-lg-3">
+                  <div class="card">
+                     <div class="card-status-top bg-danger"></div>
+                     <div class="card-body">
+                        <div class="d-flex align-items-center">
+                           <div class="subheader">Total Course</div>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                           <div class="mb-0 me-2">
+                              <span th:text="${sumcourse}" class="text-pink" style="font-size: 40px;"></span> <span
+                                   class="text-uppercase">courses</span>
+                           </div>
+                        </div>
+                     </div>
+<!--                     <div id="chart-revenue-bg" class="chart-sm"></div>-->
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-3">
+                  <div class="card">
+                     <div class="card-status-top bg-primary"></div>
+                     <div class="card-body">
+                        <div class="d-flex align-items-center">
+                           <div class="subheader">Total Student Group</div>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                           <div class="mb-0 me-2">
+                              <span th:text="${sumstugroup}" class="text-priamry" style="font-size: 40px;"></span> <span
+                                   class="text-uppercase">student groups</span>
+                           </div>
+                        </div>
+                     </div>
+<!--                     <div id="chart-revenue-bg" class="chart-sm"></div>-->
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-3">
+                  <div class="card">
+                     <div class="card-status-top bg-teal"></div>
+                     <div class="card-body">
+                        <div class="d-flex align-items-center">
+                           <div class="subheader">Total Subject</div>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                           <div class="mb-3 me-2">
+                              <span th:text="${sumsubject}" class="text-teal" style="font-size: 40px;"></span> <span
+                                   class="text-uppercase">subjects</span>
+                           </div>
+                        </div>
+<!--                        <div id="chart-new-clients" class="chart-sm"></div>-->
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-3">
+               <div class="card">
+                  <div class="card-status-top bg-indigo"></div>
+                  <div class="card-body">
+                     <div class="d-flex align-items-center">
+                        <div class="subheader">Total Student</div>
+                     </div>
+                     <div class="d-flex align-items-baseline">
+                        <div class="mb-3 me-2">
+                           <span th:text="${sum}" class="text-indigo" style="font-size: 40px;"></span> <span class="text-uppercase">
+                              students</span>
+                        </div>
+                     </div>
+<!--                     <div id="chart-active-users" class="chart-sm"></div>-->
+                  </div>
+               </div>
+            </div>
+               <div class="col-sm-6 col-lg-3">
+                  <div class="card">
+                     <div class="card-status-top bg-green"></div>
+                     <div class="card-body">
+                        <div class="d-flex align-items-center">
+                           <div class="subheader">Total Lecturer</div>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                           <div class="mb-3 me-2">
+                              <span th:text="${sumlecturer}" class="text-green" style="font-size: 40px;"></span> <span
+                                   class="text-uppercase">
+                              lecturers</span>
+                           </div>
+                        </div>
+<!--                        <div id="chart-active-users" class="chart-sm"></div>-->
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-3">
+                  <div class="card">
+                     <div class="card-status-top bg-purple"></div>
+                     <div class="card-body">
+                        <div class="d-flex align-items-center">
+                           <div class="subheader">Total Staff</div>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                           <div class="mb-3 me-2">
+                              <span th:text="${sumstaff}" class="text-purple" style="font-size: 40px;"></span> <span class="text-uppercase">
+                              staffs</span>
+                           </div>
+                        </div>
+<!--                        <div id="chart-active-users" class="chart-sm"></div>-->
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-3">
+                  <div class="card">
+                     <div class="card-status-top bg-orange"></div>
+                     <div class="card-body">
+                        <div class="d-flex align-items-center">
+                           <div class="subheader">Total Exam Schedule</div>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                           <div class="mb-3 me-2">
+                              <span th:text="${sumexam}" class="text-orange" style="font-size: 40px;"></span> <span class="text-uppercase">
+                              exam schedules</span>
+                           </div>
+                        </div>
+<!--                        <div id="chart-active-users" class="chart-sm"></div>-->
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-3">
+                  <div class="card">
+                     <div class="card-status-top bg-azure"></div>
+                     <div class="card-body">
+                        <div class="d-flex align-items-center">
+                           <div class="subheader">Total Branch</div>
+                        </div>
+                        <div class="d-flex align-items-baseline">
+                           <div class="mb-3 me-2">
+                              <span th:text="${sumbranchcampus}" class="text-azure" style="font-size: 40px;"></span> <span class="text-uppercase">
+                              branch campus</span>
+                           </div>
+                        </div>
+<!--                        <div id="chart-active-users" class="chart-sm"></div>-->
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12">
+                  <div class="card">
+                     <div class="table-responsive">
+                        <table id="tablechart" class="table table-vcenter table-bordered card-table table-striped display">
+                           <thead>
+                           <tr>
+                              <th>Id</th>
+                              <th>Rollnum</th>
+                              <th>Fullname</th>
+                              <th>Gender</th>
+                              <th>Mobile phone</th>
+                              <th>Email</th>
+                              <th>College Email</th>
+                              <th>Major</th>
+                              <th>Status</th>
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr th:each="s:${list}">
+                              <td th:text="${s.getStuid()}"></td>
+                              <td th:text="${s.getRollnum()}"></td>
+                              <td th:text="${s.getFullnm()}"></td>
+                              <td th:text="${s.getGender()}"></td>
+                              <td th:text="${s.getMobphone()}"></td>
+                              <td th:text="${s.getEmail()}"></td>
+                              <td th:text="${s.getCollegeemail()}"></td>
+                              <td th:text="${s.getMajor()}"></td>
+                              <td th:text="${s.getStustatus()}"></td>
+                           </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+<!--         <div class="chart">-->
+<!--            <canvas id="myChart"></canvas>-->
+<!--         </div>-->
+         <footer th:replace="fragments :: footer"></footer>
+      </div>
+   </div>
+   <div th:replace="fragments :: scriptjs"></div>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>-->
+<!--   <script th:src="@{/dist/js/chart.js}"></script>-->
+</body>
+</html>

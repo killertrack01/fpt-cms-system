@@ -1,0 +1,118 @@
+<!-- Modal Create department -->
+<div th:fragment="courseCreate">
+    <div class="modal modal-blur fade show" id="createCourse" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">New Course</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newcourse">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3 mt-3">
+                                        <label class="form-label" for="create_CourseName">Course name</label>
+                                        <input type="text" id="create_CourseName" class="form-control" placeholder="Input new Course name">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3 mt-3">
+                                        <label class="form-label" for="create_BranchName">Branch name</label>
+                                        <select class="form-select" id="create_BranchName">
+                                            <option value="0" selected>--Select Group--</option>
+                                            <div th:each="c:${branch}">
+                                                <option th:value="${c.getBranchid()}"><span th:text="${c.getBranchnm()}"></span></option>
+                                            </div>
+
+                                        </select>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="create course">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal Update course -->
+<div th:fragment="courseEdit">
+    <div class="modal modal-blur fade show" id="courseEdit" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">Course</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateCourse">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3 mt-3">
+                                        <input type="hidden" id="edit_id" name="edit_id">
+                                        <label class="form-label" for="edit_CourseName">Course name</label>
+                                        <input type="text" id="edit_CourseName" name="courid" class="form-control">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3 mt-3">
+                                        <label class="form-label" for="edit_BranchName">Branch name</label>
+                                        <select class="form-select" name="branchid" id="edit_BranchName">
+                                            <option value="0" selected>--Select Group--</option>
+                                            <div th:each="c:${branch}">
+                                                <option th:value="${c.getBranchid()}"><span th:text="${c.getBranchnm()}"></span></option>
+                                            </div>
+
+                                        </select>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="edit course">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Scripts -->
+<div th:fragment="courseScripts">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script th:src="@{/dist/js/coursevalid.js}"></script>
+    <script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+    <div th:replace="fragments :: scriptjs"></div>
+</div>

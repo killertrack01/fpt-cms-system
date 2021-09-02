@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:AnBranch" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ThanhBranch" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2eaa17a9-8771-465c-953c-15894a100485" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/spring_boot_starter_mail_2_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/configuration/Mail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/configuration/MailConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminAttendanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminBranchCampusController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminFeedbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminStudentClassController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminStudentGroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/ExcelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/ExcelSubjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/HandleErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/ParentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/AttendanceRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/BranchCampusRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/ExcelRestCourseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/ExcelRestStudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/FeedbackRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/ParentRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/StudentClassRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/StudentFeedbackRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/AttendanceDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/BranchCampusDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/CampusDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/DateAttendanceDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/FeedbackDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/GetDataToCreateAttendanceDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/GpaLecturerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/ImportStudentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/ImportSubjectDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/LecturerMailDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/StudentClassDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/StudentFeedbackDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/SubjectDateInTimetableDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/TeacherTimetableDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/helper/ExcelHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/FindStudentInAttendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/FindStudentgroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/GpaLecturer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/NewClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/NewStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/ParentResults.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/RenderGpalecturer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/RenderLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/RenderStudentgroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/RenderTeachingHours.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/ReportAttendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SearchSubjectAttendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentCurrentClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentLearnAgain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/AttendanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/BranchCampusRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/CampusRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/FeedbackRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/GpaLecturerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentAttendanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentFeedbackRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/AttendanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/BranchCampusService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ExcelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ExcelSubjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/FeedbackService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/GpaLecturerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IAttendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IBranchCampus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IFeedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IGpaLecturer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IMail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IStudentclass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ISubjectdetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ImportStudentExcel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ImportSubjectExcel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/MailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ReadExcelCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ReadExcelStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StudentClassService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/SubjectdetailServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/70434083_10212132209819545_7606512940937641984_n.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/default_user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/images (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/images (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/images (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/images.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/70434083_10212132209819545_7606512940937641984_n.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/beer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/default_user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/images (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/images (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/images (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/images.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/default_user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/images (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/images (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/images (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/images.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/admingpalecturer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/adminlecturerprofile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/attendanceLecturer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/branchcampusvalid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/feedback.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/lecturercourses.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/lecturerstudentgroup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/parentUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/reportattendance.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/reportattendancelecturer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentProfileUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentTimetable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentclass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentfeedback.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/subjectdetailsvalid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/subjectimport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/teachinghours.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/totalteachinghourslecturer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/viewPatimetable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/LOGO1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/LOGO2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/wel-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/attendance/main-attendance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/attendance/report-attendance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/branchcampus/main-branchcampus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/courses/importcourse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard/access-denied.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard/main-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/feedbacks/main-feedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lecturer/gpalecturer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lecturer/teachinghours.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentclass/main-studentclass.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/subjects/importsubject.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/timetable/report-timetable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/attendanceDateFormPartial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/attendanceFormPartial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/attendanceReportFormPatial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/branchcampusFormPartial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/feedbackFormPartial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/attendance/attendance-studentgroup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/attendance/main-attendance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/attendance/report-attendance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/courses/main-courses.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/subjects/main-subject.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/teachinghours/main-teachinghours.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturerTeachingHoursFormPartial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login/admin-login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login/lecturer-login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login/parent-login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login/student-login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parents/dashboard/main-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parents/results/main-results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parents/timetable/main-timetable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/studentClassFormPartial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/students/exam/main-exam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/students/feedback/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/students/feedback/studentfeedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/students/profile/main-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/students/results/main-result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/students/timetable/main-timetable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/subjectdetailFormPartial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teachinghoursFormPartial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/FindStudentInAttendance_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/FindStudentgroup_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/GpaLecturer_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/NewClass_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/NewStudent_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/ParentResults_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderAttendanceReport_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderAttendance_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderGpalecturer_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderLocation_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderSemesterAttendance_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderStudentgroup_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderSubjectAttendance_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderTeachingHours_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/ReportAttendance_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SearchSubjectAttendance_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentCurrentClass_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentLearnAgain_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentResult_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.factorypath" beforeDir="false" afterPath="$PROJECT_DIR$/.factorypath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fpt-academy-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fpt-academy-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminBranchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminBranchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminDepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminLecturerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminLecturerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminStudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminSubjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminTimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/AdminTimetableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/ExcelStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/ExcelStudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/LecturerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/LecturerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/CourseRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/CourseRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/ExamRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/ExamRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/LecturerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/LecturerRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/ResultRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/ResultRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/StaffRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/StaffRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/StudentGroupRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/StudentGroupRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/StudentRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/StudentRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/SubjectRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/SubjectRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/TimetableRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/controller/rest/TimetableRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/ExamDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/ExamDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/StudentGroupDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/StudentGroupDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/SubjectDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/SubjectDetailsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/TimetableDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/TimetableDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/helper/ExcelStudentHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/helper/ExcelStudentHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/helper/ExcelSubjectHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/helper/ExcelSubjectHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Attendance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Attendance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Branch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/BranchCampus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/BranchCampus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Campus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Campus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Courses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Exam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/GetBranchCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/GetBranchCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Lecturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Lecturer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/LecturerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/LecturerAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/MindateMaxdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/MindateMaxdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/ParentAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/ParentAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Province.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/RenderTimetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/RenderTimetable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SearchSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SearchSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SearchSubjectByDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SearchSubjectByDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Semester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Semester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StaffAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StaffAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentFeedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/StudentGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SubjectDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SubjectDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SubjectSubjectdetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/SubjectSubjectdetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Timetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Timetable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/model/Wards.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/BranchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/BranchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/ExamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/ExamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/LecturerAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/LecturerAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/LecturerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/LecturerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/ParentAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/ParentAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/ParentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/ParentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/ResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/ResultRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/SemesterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/SemesterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StaffAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StaffAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentGroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentGroupRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/SubjectDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/SubjectDetailRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/SubjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/SubjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/TimetableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/repository/TimetableRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/BranchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/BranchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ExamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IBranch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ILecturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ILecturer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ILecturerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ILecturerAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IParent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IParentAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IParentAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IStaffAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IStaffAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IStudentGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/IStudentGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ISubjectSubjectDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ISubjectSubjectDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ITimetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ITimetable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ImportExcelFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ImportExcelFileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/LecturerAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/LecturerAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/LecturerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/LecturerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ParentAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ParentAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ParentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ParentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/ResultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StaffAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StaffAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StudentGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StudentGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/TimetableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/services/TimetableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/staffs/62516243_10211624576849038_6511791580381184000_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/166788451_10215627762246171_4768025148384662327_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/62516243_10211624576849038_6511791580381184000_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/students/EKq4u68FzDxLvDi2lGTfdjC8KY_vLho-YJqmsOjD0Dc.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/62516243_10211624576849038_6511791580381184000_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/teachers/quangdang.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/exam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/lecturerprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/lecturerprofile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/lecturervalid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/lecturervalid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/staffprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/staffprofile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/staffvalid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/staffvalid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentgroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentgroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentprofile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentvalid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/studentvalid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/subjectvalid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/subjectvalid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/timetable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/timetable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/branchs/main-branch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/branchs/main-branch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/courses/main-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/courses/main-course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/departments/main-department.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/departments/main-department.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/exams/main-exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/exams/main-exam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/lecturer/main-lecturer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lecturer/main-lecturer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/lecturer/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lecturer/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/results/main-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/results/main-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/role/main-role.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/role/main-role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/staffs/main-staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/staffs/main-staff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/staffs/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/staffs/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentgroup/main-studentgroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentgroup/main-studentgroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/students/importstudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/students/importstudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/students/main-student.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/students/main-student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/students/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/students/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/subjects/main-subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/subjects/main-subject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/timetable/main-timetable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/timetable/main-timetable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/departmentFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/departmentFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/examFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/examFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lec-fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lec-fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/profile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/profile/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/students/studentgroups.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/students/studentgroups.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturerformpartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturerformpartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pa-fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pa-fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parents/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/attendance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/resultFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/resultFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/staffFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/staffFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/stu-fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/stu-fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/studentFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/studentFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/studentgroupFromPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/studentgroupFromPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/students/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/students/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/timetableFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/timetableFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/staffs/62516243_10211624576849038_6511791580381184000_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/students/166788451_10215627762246171_4768025148384662327_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/students/62516243_10211624576849038_6511791580381184000_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/students/EKq4u68FzDxLvDi2lGTfdjC8KY_vLho-YJqmsOjD0Dc.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/teachers/62516243_10211624576849038_6511791580381184000_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/teachers/quangdang.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/exam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/lecturerprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/lecturerprofile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/lecturervalid.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/lecturervalid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/staffprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/staffprofile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/staffvalid.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/staffvalid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/studentgroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/studentgroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/studentprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/studentprofile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/studentvalid.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/studentvalid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/subjectvalid.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/subjectvalid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/timetable.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/timetable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/branchs/main-branch.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/branchs/main-branch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/courses/main-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/courses/main-course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/dashboard/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/dashboard/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/departments/main-department.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/departments/main-department.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/exams/main-exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/exams/main-exam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/lecturer/main-lecturer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/lecturer/main-lecturer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/lecturer/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/lecturer/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/results/main-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/results/main-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/role/main-role.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/role/main-role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/staffs/main-staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/staffs/main-staff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/staffs/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/staffs/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/studentgroup/main-studentgroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/studentgroup/main-studentgroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/students/importstudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/students/importstudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/students/main-student.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/students/main-student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/students/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/students/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/subjects/main-subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/subjects/main-subject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/timetable/main-timetable.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/timetable/main-timetable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/departmentFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/departmentFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/examFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/examFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lec-fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lec-fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/profile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/profile/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/students/studentgroups.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/students/studentgroups.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturerformpartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturerformpartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/pa-fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/pa-fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parents/dashboard/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/resultFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/resultFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/staffFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/staffFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/stu-fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/stu-fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/studentFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/studentFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/studentgroupFromPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/studentgroupFromPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/students/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/students/dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/timetableFormPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/timetableFormPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Attendance_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Attendance_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/BranchCampus_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/BranchCampus_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Branch_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Branch_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Campus_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Campus_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/City_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/City_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Courses_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Courses_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Department_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Department_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Exam_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Exam_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Feedback_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Feedback_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/GetBranchCount_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/GetBranchCount_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/LecturerAccount_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/LecturerAccount_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Lecturer_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Lecturer_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/MindateMaxdate_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/MindateMaxdate_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/ParentAccount_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/ParentAccount_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Parent_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Parent_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Province_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Province_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderTimetable_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/RenderTimetable_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Result_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Result_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Role_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Role_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Room_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Room_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SearchSubjectByDate_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SearchSubjectByDate_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SearchSubject_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SearchSubject_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Semester_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Semester_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StaffAccount_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StaffAccount_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Staff_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Staff_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentAccount_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentAccount_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentClass_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentClass_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentFeedback_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentFeedback_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentGroup_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/StudentGroup_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Student_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Student_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SubjectDetails_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SubjectDetails_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SubjectSubjectdetails_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/SubjectSubjectdetails_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Subject_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Subject_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Timetable_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Timetable_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Wards_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/fptacademysystem/model/Wards_.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tB1g80WznADGjcbjK7YWGdhDar" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin/attendance" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.26091954" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/admin/attendance" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FptAcademySystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="fpt-academy-system" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.fptacademysystem.FptAcademySystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2eaa17a9-8771-465c-953c-15894a100485" name="Default Changelist" comment="" />
+      <created>1622227776509</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622227776509</updated>
+      <workItem from="1622227780443" duration="2190000" />
+      <workItem from="1622263507870" duration="4366000" />
+      <workItem from="1622274958437" duration="8815000" />
+      <workItem from="1622387569992" duration="717000" />
+      <workItem from="1622525279389" duration="18546000" />
+      <workItem from="1622878817819" duration="7138000" />
+      <workItem from="1622903284428" duration="4899000" />
+      <workItem from="1622964650411" duration="3400000" />
+      <workItem from="1623147819951" duration="892000" />
+      <workItem from="1623484456531" duration="10430000" />
+      <workItem from="1623498272267" duration="6855000" />
+      <workItem from="1623517757721" duration="2652000" />
+      <workItem from="1623558063293" duration="2945000" />
+      <workItem from="1623635039215" duration="4036000" />
+      <workItem from="1623767075566" duration="438000" />
+      <workItem from="1623768296125" duration="8234000" />
+      <workItem from="1623815334732" duration="1284000" />
+      <workItem from="1623917893650" duration="9419000" />
+      <workItem from="1623946227926" duration="3560000" />
+      <workItem from="1623990344732" duration="3959000" />
+      <workItem from="1624087681713" duration="274000" />
+      <workItem from="1624089035658" duration="4090000" />
+      <workItem from="1624184032787" duration="4409000" />
+      <workItem from="1624190372420" duration="9124000" />
+      <workItem from="1624285858467" duration="4900000" />
+      <workItem from="1624347601652" duration="5406000" />
+      <workItem from="1624439148872" duration="660000" />
+      <workItem from="1624451241239" duration="236000" />
+      <workItem from="1624454684961" duration="12436000" />
+      <workItem from="1624516861875" duration="9893000" />
+      <workItem from="1624539059638" duration="9323000" />
+      <workItem from="1624588788511" duration="2542000" />
+      <workItem from="1624713432187" duration="743000" />
+      <workItem from="1624714233417" duration="3063000" />
+      <workItem from="1624717485060" duration="4281000" />
+      <workItem from="1624778677984" duration="884000" />
+      <workItem from="1624892946185" duration="12034000" />
+      <workItem from="1624910368668" duration="435000" />
+      <workItem from="1624937451554" duration="3141000" />
+      <workItem from="1625022348793" duration="4410000" />
+      <workItem from="1625030333432" duration="687000" />
+      <workItem from="1625032303601" duration="819000" />
+      <workItem from="1625043630775" duration="20079000" />
+      <workItem from="1625146261121" duration="6441000" />
+      <workItem from="1625158617714" duration="4627000" />
+      <workItem from="1625167947505" duration="1766000" />
+      <workItem from="1625189998764" duration="2977000" />
+      <workItem from="1625239982913" duration="1475000" />
+      <workItem from="1625241585911" duration="3427000" />
+      <workItem from="1625326297602" duration="1619000" />
+      <workItem from="1625493229396" duration="11405000" />
+      <workItem from="1625517698542" duration="646000" />
+      <workItem from="1625550243807" duration="1159000" />
+      <workItem from="1625656612631" duration="12038000" />
+      <workItem from="1625740964480" duration="14421000" />
+      <workItem from="1625801083912" duration="2950000" />
+      <workItem from="1625810356560" duration="304000" />
+      <workItem from="1625810695475" duration="624000" />
+      <workItem from="1625832150746" duration="2645000" />
+      <workItem from="1625841744915" duration="22818000" />
+      <workItem from="1625996023356" duration="99000" />
+      <workItem from="1625996179667" duration="1125000" />
+      <workItem from="1626011181765" duration="4052000" />
+      <workItem from="1626015600832" duration="190000" />
+      <workItem from="1626016306107" duration="1020000" />
+      <workItem from="1626017368753" duration="7562000" />
+      <workItem from="1626055500792" duration="4309000" />
+      <workItem from="1626064633750" duration="5177000" />
+      <workItem from="1626100066580" duration="6125000" />
+      <workItem from="1626114491536" duration="262000" />
+      <workItem from="1626185756277" duration="15786000" />
+      <workItem from="1626216281538" duration="1243000" />
+      <workItem from="1626226946568" duration="9409000" />
+      <workItem from="1626346299625" duration="11593000" />
+      <workItem from="1626433839347" duration="3441000" />
+      <workItem from="1626512783712" duration="2377000" />
+      <workItem from="1626604466582" duration="19206000" />
+      <workItem from="1626664001289" duration="8278000" />
+      <workItem from="1626690946635" duration="17148000" />
+      <workItem from="1626730439935" duration="763000" />
+      <workItem from="1626775658195" duration="3337000" />
+      <workItem from="1626859244921" duration="18980000" />
+      <workItem from="1626924715771" duration="20302000" />
+      <workItem from="1626968276853" duration="8443000" />
+      <workItem from="1627003174213" duration="3536000" />
+      <workItem from="1627052517269" duration="8206000" />
+      <workItem from="1627102255617" duration="5155000" />
+      <workItem from="1627197072964" duration="17123000" />
+      <workItem from="1627259891564" duration="26979000" />
+      <workItem from="1627346684349" duration="9797000" />
+      <workItem from="1627391993696" duration="11256000" />
+      <workItem from="1627444426417" duration="33070000" />
+      <workItem from="1627517799229" duration="12890000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="511" y="23" key="#HTML" timestamp="1622528012470">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="511" y="23" key="#HTML/0.23.1440.830@0.23.1440.830" timestamp="1622528012470" />
+    <state x="208" y="23" width="1024" height="830" key="#Project_Structure" timestamp="1627528949420">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="208" y="23" width="1024" height="830" key="#Project_Structure/0.23.1440.830@0.23.1440.830" timestamp="1627528949420" />
+    <state x="533" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1627519289212">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="533" y="151" key="#com.intellij.ide.util.MemberChooser/0.23.1440.830@0.23.1440.830" timestamp="1627519289212" />
+    <state x="382" y="247" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1626357073778">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="382" y="247" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.830@0.23.1440.830" timestamp="1626357073778" />
+    <state x="166" y="369" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1627520832747">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="166" y="369" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.830@0.23.1440.830" timestamp="1627520832747" />
+    <state x="458" y="192" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627268810197">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="458" y="192" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.830@0.23.1440.830" timestamp="1627268810197" />
+    <state x="274" y="200" key="#org.jetbrains.debugger.memory.view.InstancesWindow" timestamp="1625065418329">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="274" y="200" key="#org.jetbrains.debugger.memory.view.InstancesWindow/0.23.1440.830@0.23.1440.830" timestamp="1625065418329" />
+    <state x="682" y="243" key="#xdebugger.evaluate" timestamp="1626880387206">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="682" y="243" key="#xdebugger.evaluate/0.23.1440.830@0.23.1440.830" timestamp="1626880387206" />
+    <state width="1398" height="351" key="GridCell.Tab.0.bottom" timestamp="1627537917675">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="351" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1627537917675" />
+    <state width="1398" height="351" key="GridCell.Tab.0.center" timestamp="1627537917674">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="351" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1627537917674" />
+    <state width="1398" height="351" key="GridCell.Tab.0.left" timestamp="1627537917673">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="351" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1627537917673" />
+    <state width="1398" height="351" key="GridCell.Tab.0.right" timestamp="1627537917675">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="351" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1627537917675" />
+    <state width="1398" height="351" key="GridCell.Tab.1.bottom" timestamp="1627537917677">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="351" key="GridCell.Tab.1.bottom/0.23.1440.830@0.23.1440.830" timestamp="1627537917677" />
+    <state width="1398" height="351" key="GridCell.Tab.1.center" timestamp="1627537917676">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="351" key="GridCell.Tab.1.center/0.23.1440.830@0.23.1440.830" timestamp="1627537917676" />
+    <state width="1398" height="351" key="GridCell.Tab.1.left" timestamp="1627537917676">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="351" key="GridCell.Tab.1.left/0.23.1440.830@0.23.1440.830" timestamp="1627537917676" />
+    <state width="1398" height="351" key="GridCell.Tab.1.right" timestamp="1627537917676">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="351" key="GridCell.Tab.1.right/0.23.1440.830@0.23.1440.830" timestamp="1627537917676" />
+    <state width="1398" height="219" key="GridCell.Tab.2.bottom" timestamp="1627505406916">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="219" key="GridCell.Tab.2.bottom/0.23.1440.830@0.23.1440.830" timestamp="1627505406916" />
+    <state width="1398" height="219" key="GridCell.Tab.2.center" timestamp="1627505406915">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="219" key="GridCell.Tab.2.center/0.23.1440.830@0.23.1440.830" timestamp="1627505406915" />
+    <state width="1398" height="219" key="GridCell.Tab.2.left" timestamp="1627505406915">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="219" key="GridCell.Tab.2.left/0.23.1440.830@0.23.1440.830" timestamp="1627505406915" />
+    <state width="1398" height="219" key="GridCell.Tab.2.right" timestamp="1627505406916">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="219" key="GridCell.Tab.2.right/0.23.1440.830@0.23.1440.830" timestamp="1627505406916" />
+    <state x="308" y="180" key="IDE.errors.dialog" timestamp="1622267194490">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="308" y="180" key="IDE.errors.dialog/0.23.1440.830@0.23.1440.830" timestamp="1622267194490" />
+    <state x="258" y="100" key="Maven.ArtifactSearchDialog" timestamp="1625928893123">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="258" y="100" key="Maven.ArtifactSearchDialog/0.23.1440.830@0.23.1440.830" timestamp="1625928893123" />
+    <state x="246" y="249" width="948" height="556" key="Registry" timestamp="1626357486579">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="246" y="249" width="948" height="556" key="Registry/0.23.1440.830@0.23.1440.830" timestamp="1626357486579" />
+    <state x="272" y="23" width="1024" height="830" key="SettingsEditor" timestamp="1627444719442">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="272" y="23" width="1024" height="830" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1627444719442" />
+    <state width="720" height="415" key="XDebugger.FullValuePopup" timestamp="1624902849708">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="720" height="415" key="XDebugger.FullValuePopup/0.23.1440.830@0.23.1440.830" timestamp="1624902849708" />
+    <state x="360" y="337" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1625241441526">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="360" y="337" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.830@0.23.1440.830" timestamp="1625241441526" />
+    <state x="321" y="111" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626970237188">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="321" y="111" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.830@0.23.1440.830" timestamp="1626970237188" />
+    <state x="385" y="177" width="670" height="58" key="search.everywhere.popup" timestamp="1627297352453">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="385" y="177" width="670" height="58" key="search.everywhere.popup/0.23.1440.830@0.23.1440.830" timestamp="1627297352453" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/dto/ResultDTO.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/helper/ExcelStudentHelper.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/fptacademysystem/helper/ExcelStudentHelper.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((ConversionFailedException)e).detailMessage" language="JAVA" custom="org.springframework.core.convert.ConversionFailedException" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

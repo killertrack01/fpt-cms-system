@@ -1,0 +1,222 @@
+<div th:fragment="timetableCreate">
+    <form id="createTimetableForm" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-row mb-2 row">
+                <!-- Courses -->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="Courses" class="form-label">Courses</label>
+                        <select class="form-select" id="Courses"></select>
+                        <small></small>
+                    </div>
+                </div>
+                <!-- Student Group -->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="stugroid" class="form-label">Student Group</label>
+                        <select class="form-select" id="stugroid"></select>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Semester -->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="Semester" class="form-label">Semester</label>
+                        <select class="form-select" id="Semester" placeholder="Semester"></select>
+                        <small></small>
+                    </div>
+                </div>
+                <!-- Start Date -->
+                <div class="col-6">
+                    <label class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="startDate" name="startDate">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Lecturer -->
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="LecturerC" class="form-label">Lecturer</label>
+                        <select class="form-select" id="LecturerC"></select>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+            <!--Submit button-->
+            <div class="row">
+                <div class="col-4">
+                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">Cancel</a>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4 d-flex justify-content-end">
+                    <input type="submit" class="btn btn-primary" value="Create">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div th:fragment="timetableUpdate">
+    <form id="updateTimetableForm" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-row mb-2 row">
+                <!-- Student Group -->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="stugroid" class="form-label">Student Group</label>
+                        <input type="hidden" class="form-control" id="StudentGroupUpdateTT" readonly>
+                        <input type="text" class="form-control" id="StudentGroupUpdateTTGetText" readonly>
+                    </div>
+                </div>
+                <!-- Semester -->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="SemesterUpdateTT" class="form-label">Semester</label>
+                        <input type="text" class="form-control" id="SemesterUpdateTT" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Start Date -->
+                <div class="col-6">
+                    <label class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="StartDateUpdateTT">
+                    <small></small>
+                </div>
+                <!-- Lecturer -->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="LecturerUpdateTT" class="form-label">Lecturer</label>
+                        <select class="form-control" id="LecturerUpdateTT"></select>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+            <!--Submit button-->
+            <div class="row">
+                <div class="col-4">
+                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">Cancel</a>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4 d-flex justify-content-end">
+                    <input type="submit" class="btn btn-primary" value="Update">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div th:fragment="timetableUpdateTeacher">
+    <form id="updateTeacherForm" enctype="multipart/form-data">
+        <div class="row">
+            <input type="text" class="form-control" hidden id="teacherIdUTeacher">
+            <div class="form-row mb-2 row">
+                <!-- Teacher -->
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="TeacherUT" class="form-label">Teacher</label>
+                        <select class="form-control" id="TeacherUT"></select>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+            <!--Submit button-->
+            <div class="row">
+                <div class="col-4">
+                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">Cancel</a>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4 d-flex justify-content-end">
+                    <input type="submit" class="btn btn-primary" value="Update">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div th:fragment="searchTimetable">
+    <div class="row">
+        <!-- Select Option -->
+        <div class="col-auto">
+            <div class="mb-3">
+                <select id="optionSearch" class="form-select" aria-label="Default select example">
+                    <option selected disabled>Search By</option>
+                    <option value="SBSG">Student Group</option>
+                    <option value="SBSN">Subject Name</option>
+                    <option value="SBSD">Subject Date</option>
+                    <option value="SBW">Week</option>
+                    <option value="SBL">Location</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-auto">
+            <div class="mb-3">
+                <div class="row">
+                    <!-- Search By Student Group -->
+                    <!-- Branch -->
+                    <div class="col-auto" id="divBranchSByStudentGroup"><select class="form-select" id="BranchSByStudentGroup"></select></div>
+                    <!-- Student Group -->
+                    <div class="col-auto" id="divStudentGroupS"><select class="form-select" id="StudentGroupS"></select></div>
+                    <!-- Semester -->
+                    <div class="col-auto" id="divSemesterS"><select class="form-select" id="SemesterS"></select></div>
+
+                    <!-- Search By Subject Name -->
+                    <!-- Branch -->
+                    <div class="col-auto" id="divBranchS"><select class="form-select" id="BranchS"></select></div>
+                    <!-- Subject -->
+                    <div class="col-auto" id="divSubjectS"><select class="form-select" id="SubjectS"></select></div>
+
+                    <!-- Search By Subject Date -->
+                    <div class="col-auto" id="divSubjectDateS">
+                        <div class="row">
+                            <div class="col-auto">
+                                <!-- Start Date -->
+                                <input type="date" class="form-control" id="SubjectDateSStartDate" required>
+                                <small></small>
+                            </div>
+                            <div class="col-auto">
+                                <!-- End Date -->
+                                <input type="date" class="form-control" id="SubjectDateSEndDate" required>
+                                <small></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search By Week -->
+                    <!-- List Week Of Year -->
+                    <div class="col-auto" id="divListWeekS"><select class="form-select" id="ListWeekS"></select></div>
+
+
+
+                    <!-- Search By Location -->
+                    <!-- Branch -->
+                    <div class="col-auto" id="divBranchSLocation"><select class="form-select" id="BranchSLocation"></select></div>
+                    <!-- Campus -->
+                    <div class="col-auto" id="divCampusSLocation"><select class="form-select" id="CampusSLocation"></select></div>
+                    <!-- Branch Campus Location -->
+                    <div class="col-auto" id="divBranchCampusSLocation"><select class="form-select" id="BranchCampusSLocation"></select></div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Submit -->
+        <div class="col-auto">
+            <div class="mb-3">
+                <button type="button" id="btnSearchTimetable" class="btn btn-instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                         stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                         stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="10" cy="10" r="7" />
+                        <line x1="21" y1="21" x2="15" y2="15" /></svg> Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:fragment="renderTimetable">
+    <div id="renderTT"></div>
+</div>

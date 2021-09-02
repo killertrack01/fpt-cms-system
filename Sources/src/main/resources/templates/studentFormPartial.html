@@ -1,0 +1,365 @@
+<div th:fragment="studentCreate">
+    <form id="createStudentForm" enctype="multipart/form-data">
+        <div class="row">
+            <h1>Personal information</h1>
+            <hr>
+            <div class="form-row mb-2 row">
+                <!-- Full name -->
+                <div class="col-6">
+                    <label class="form-label">Full name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fullname" name="fullnm" placeholder="Enter fullname">
+                    <small></small>
+                </div>
+                <!-- College email -->
+                <div class="col-6">
+                    <label class="form-label">Collegee email<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="collegeemail" name="collegeemail"
+                           placeholder="ColegeEmail@gmail.com">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Email -->
+                <div class="col-5">
+                    <label class="form-label">Email<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email@gmail.com">
+                    <small></small>
+                </div>
+                <!-- Address -->
+                <div class="col-7">
+                    <label class="form-label">Address</label>
+                    <input type="text" class="form-control " id="address" name="address" placeholder="Enter last name">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Day of birth -->
+                <div class="col-4">
+                    <label class="form-label">Day of birth<span class="text-danger">*</span></label>
+                    <input type="date" id="dob" name="dob" class="form-control">
+                    <small></small>
+                </div>
+                <!-- Gender -->
+                <div class="col-4">
+                    <label class="form-label">Gender<span class="text-danger">*</span></label>
+                    <select id="gender" name="gender" class="form-select">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small></small>
+                </div>
+                <!-- Mobile phone -->
+                <div class="col-4">
+                    <label class="form-label">Mobile phone<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="mobilephone" name="mobphone"
+                           placeholder="Enter mobile phone">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-4 row">
+                <!-- Avatar -->
+                <div>
+                    <label class="form-label">Avatar</label>
+                    <input type="file" id="avatar" name="img" class="form-control">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Parent</h1>
+            <hr>
+            <div class="form-row mb-2 row">
+                <!-- Parent name -->
+                <div class="col-4">
+                    <label class="form-label">Parent name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="parentname" name="parnm"
+                           placeholder="Enter parent name">
+                    <small></small>
+                </div>
+                <!-- Parent job -->
+                <div class="col-4">
+                    <label class="form-label">Parent job</label>
+                    <input type="text" class="form-control" id="parentjob" name="parjob" placeholder="Enter parent job">
+                    <small></small>
+                </div>
+                <!-- Parent phone -->
+                <div class="col-4">
+                    <label class="form-label">Parent phone<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="parentphone" name="parphone"
+                           placeholder="Enter parent phone ">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Parent email -->
+                <div class="col-12">
+                    <label class="form-label">Parent email<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="parentemail" name="paremail"
+                           placeholder="Email@gmail.com">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-4 row">
+                <!-- Parent Address -->
+                <div class="col-6">
+                    <label class="form-label">Parent address</label>
+                    <input type="text" class="form-control" id="parentaddress" name="paddress"
+                           placeholder="Enter parent address">
+                    <small></small>
+                </div>
+                <!-- Place of work -->
+                <div class="col-6">
+                    <label class="form-label">Place of work</label>
+                    <input type="text" class="form-control" id="placeofwork" name="pow"
+                           placeholder="Enter place of work">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Identity</h1>
+            <hr>
+            <div class="form-row mb-4 row">
+                <!-- Id card -->
+                <div class="col-4">
+                    <label class="form-label">Id card number<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="idcard" name="idcard"
+                           placeholder="Enter id card number">
+                    <small></small>
+                </div>
+                <!-- day issue -->
+                <div class="col-4">
+                    <label class="form-label">Date issue<span class="text-danger">*</span></label>
+                    <input type="date" id="dateissue" name="doi" class="form-control">
+                    <small></small>
+                </div>
+                <!-- place issue -->
+                <div class="col-4">
+                    <label class="form-label">Place issue<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="placeissue" name="poi" placeholder="Enter place issue ">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Major</h1>
+            <hr>
+            <div class="form-row mb-4 row">
+                <!-- Major -->
+                <div class="col">
+                    <label class="form-label">Major<span class="text-danger">*</span></label>
+                    <select class="form-select" id="major" name="major">
+                        <option value="">---Select major---</option>
+                        <option th:each="m:${major}" th:value="${m.branchnm}" th:text="${m.branchnm}"></option>
+                    </select>
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-row mb-4 row">
+                <div class="form-row mb-4 row">
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary " value="Create new Student">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div th:fragment="studentEdit">
+    <form id="editStudentForm" enctype="multipart/form-data">
+        <div class="row">
+            <h1>Personal information</h1>
+            <hr>
+            <div class="form-row mb-2 row">
+                <input type="text" class="form-control" hidden id="editstudentid" name="stuid">
+                <div class="form-row mb-2 row">
+                    <!-- Full name -->
+                    <div class="col-6">
+                        <label class="form-label">Full name</label>
+                        <input type="text" class="form-control" id="editfullname" name="fullnm"
+                               placeholder="Enter fullname">
+                        <small></small>
+                    </div>
+                    <!-- College email -->
+                    <div class="col-6">
+                        <label class="form-label">Collegee email</label>
+                        <input type="text" class="form-control" id="editcollegeemail" name="collegeemail"
+                               placeholder="ColegeEmail@gmail.com">
+                        <small></small>
+                    </div>
+                </div>
+                <div class="form-row mb-2 row">
+                    <!-- Email -->
+                    <div class="col-5">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" id="editemail" name="email"
+                               placeholder="Email@gmail.com">
+                        <small></small>
+                    </div>
+                    <!-- Address -->
+                    <div class="col-7">
+                        <label class="form-label">Address</label>
+                        <input type="text" class="form-control " id="editaddress" name="address"
+                               placeholder="Enter Address">
+                        <small></small>
+                    </div>
+                </div>
+                <div class="form-row mb-2 row">
+                    <!-- Day of birth -->
+                    <div class="col-4">
+                        <label class="form-label">Day of birth</label>
+                        <input type="date" id="editdob" name="dob" class="form-control">
+                        <small></small>
+                    </div>
+                    <!-- Gender -->
+                    <div class="col-4">
+                        <label class="form-label">Gender</label>
+                        <select id="editgender" name="gender" class="form-select">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <small></small>
+                    </div>
+                    <!-- Mobile phone -->
+                    <div class="col-4">
+                        <label class="form-label">Mobile phone</label>
+                        <input type="text" class="form-control" id="editmobilephone" name="mobphone"
+                               placeholder="Enter mobile phone">
+                        <small></small>
+                    </div>
+                </div>
+                <div class="form-row mb-4 row">
+                    <!-- Avatar -->
+                    <div>
+                        <label class="form-label">Avatar</label>
+                        <input type="file" id="editavatar" name="img" class="form-control">
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Parent</h1>
+            <hr>
+            <div class="form-row mb-2 row">
+                <!-- Parent name -->
+                <div class="col-4">
+                    <label class="form-label">Parent name</label>
+                    <input type="text" class="form-control" id="editparentname" name="parnm"
+                           placeholder="Enter parent name">
+                    <small></small>
+                </div>
+                <!-- Parent job -->
+                <div class="col-4">
+                    <label class="form-label">Parent job</label>
+                    <input type="text" class="form-control" id="editparentjob" name="parjob"
+                           placeholder="Enter parent job">
+                    <small></small>
+                </div>
+                <!-- Parent phone -->
+                <div class="col-4">
+                    <label class="form-label">Parent phone</label>
+                    <input type="text" class="form-control" id="editparentphone" name="parphone"
+                           placeholder="Enter parent phone ">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-2 row">
+                <!-- Parent email -->
+                <div class="col-12">
+                    <label class="form-label">Parent email</label>
+                    <input type="text" class="form-control" id="editparentemail" name="paremail"
+                           placeholder="Email@gmail.com">
+                    <small></small>
+                </div>
+            </div>
+            <div class="form-row mb-4 row">
+                <!-- Parent Address -->
+                <div class="col-6">
+                    <label class="form-label">Parent address</label>
+                    <input type="text" class="form-control" id="editparentaddress" name="paddress"
+                           placeholder="Enter parent address">
+                    <small></small>
+                </div>
+                <!-- Place of work -->
+                <div class="col-6">
+                    <label class="form-label">Place of work</label>
+                    <input type="text" class="form-control" id="editplaceofwork" name="pow"
+                           placeholder="Enter place of work">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Identity</h1>
+            <hr>
+            <div class="form-row mb-4 row">
+                <!-- Id card -->
+                <div class="col-4">
+                    <label class="form-label">Id card number</label>
+                    <input type="text" class="form-control" id="editidcard" name="idcard"
+                           placeholder="Enter id card number">
+                    <small></small>
+                </div>
+                <!-- day issue -->
+                <div class="col-4">
+                    <label class="form-label">Date issue</label>
+                    <input type="date" id="editdateissue" name="doi" class="form-control">
+                    <small></small>
+                </div>
+                <!-- place issue -->
+                <div class="col-4">
+                    <label class="form-label">Place issue</label>
+                    <input type="text" class="form-control" id="editplaceissue" name="poi"
+                           placeholder="Enter place issue ">
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Major</h1>
+            <hr>
+            <div class="form-row mb-4 row">
+                <!-- Major -->
+                <div class="col">
+                    <label class="form-label">Major</label>
+                    <select class="form-select" id="editmajor" name="major">
+                        <option value="">---Select major---</option>
+                        <option th:each="m:${major}" th:value="${m.branchnm}" th:text="${m.branchnm}"></option>
+                    </select>
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-row mb-4 row">
+                <!-- Reset Pass -->
+                <div class="col">
+                    <label class="form-check">
+                        <input class="form-check-input" type="checkbox" id="CheckResetPass">
+                        <span class="form-check-label">Reset Password</span>
+                    </label>
+                </div>
+                <input type="text" class="form-control" hidden id="ResetPass" name="studentPass">
+            </div>
+            <div class="form-row mb-4 row">
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary " value="Save">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script th:src="@{/dist/js/studentvalid.js}"></script>
+    <script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+</div>

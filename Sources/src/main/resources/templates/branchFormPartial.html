@@ -1,0 +1,88 @@
+<!-- Modal Create department -->
+<div th:fragment="branchCreate">
+    <div class="modal modal-blur fade show" id="createBranch" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">New Branch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newbranch">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="create_BranchName">Branch name</label>
+                                        <input type="text" id="create_BranchName" name="name" class="form-control" placeholder="Input new branch name">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="Create branch">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal Update department -->
+<div th:fragment="branchEdit">
+    <div class="modal modal-blur fade show" id="updatebranch" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">Branch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateBranch">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3 mt-3">
+                                        <input type="hidden" id="edit_id" name="edit_id">
+                                        <label class="form-label" for="edit_BranchName">Branch name</label>
+                                        <input type="text" id="edit_BranchName" class="form-control">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="edit branch">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Scripts -->
+<div th:fragment="branchScripts">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script th:src="@{/dist/js/branchvalid.js}"></script>
+    <script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+    <div th:replace="fragments :: scriptjs"></div>
+</div>

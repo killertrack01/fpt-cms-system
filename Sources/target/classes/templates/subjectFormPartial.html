@@ -1,0 +1,131 @@
+<!-- Form create subject -->
+<div th:fragment="subjectCreate">
+    <div class="modal modal-blur fade show" id="createSubject" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">Create Subject</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newsubject" enctype="multipart/form-data">
+                        <div class="container">
+                            <!-- Subject Name and Short name-->
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="create_SubjectName" class="form-label">Subject Name</label>
+                                        <input type="text" id="create_SubjectName" name="create_SubjectName" placeholder="Input Subject Name" class="form-control">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="create_ShortName" class="form-label">Short name</label>
+                                        <input type="text" id="create_ShortName" name="create_ShortName" class="form-control" placeholder="Input Short name">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Subject Branch -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Subject Branch</label>
+                                        <select class="form-select" name="create_Branch" id="create_Branch">
+                                            <option value="0" selected>--Select Group--</option>
+                                            <div th:each="c:${branch}">
+                                                <option th:value="${c.getBranchid()}"><span th:text="${c.getBranchnm()}"></span></option>
+                                            </div>
+
+                                        </select>
+
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="Create new Subject">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Form update subject -->
+<div th:fragment="subjectEdit">
+    <div class="modal modal-blur fade show" id="updatesubject" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">Edit Subject</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editsubject" enctype="multipart/form-data">
+                        <div class="container">
+                            <!-- Id subject + Subject Name + Short name-->
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="hidden" id="edit_idSubject" name="edit_idSubject">
+                                    <div class="mb-3">
+                                        <label for="edit_SubjectName" class="form-label">Subject Name</label>
+                                        <input type="text" id="edit_SubjectName" name="edit_SubjectName" placeholder="Input Subject Name" class="form-control">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="edit_ShortName" class="form-label">Short name</label>
+                                        <input type="text" id="edit_ShortName" name="edit_ShortName" class="form-control" placeholder="Input Short name">
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Subject Branch -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Subject Branch</label>
+                                        <select class="form-select" name="edit_Branch" id="edit_Branch">
+                                            <div th:each="c:${branch}">
+                                                <option th:value="${c.getBranchid()}" selected><span th:text="${c.getBranchnm()}"></span></option>
+                                            </div>
+                                        </select>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="Update Subject">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Scripts -->
+<div th:fragment="subjectScripts">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+    <script th:src="@{/dist/js/subjectvalid.js}"></script>
+    <div th:replace="fragments :: scriptjs"></div>
+</div>

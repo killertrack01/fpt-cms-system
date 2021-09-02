@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+	<title>Feedback List - Dashboard</title>
+</head>
+<body class="antialiased">
+<div class="page">
+	<!-- Include Navbar -->
+	<header th:replace="fragments :: navbar"></header>
+	<div th:replace="fragments :: subnav"></div>
+	<div class="content">
+		<div class="container-fluid">
+			<!-- Page title -->
+			<div class="d-print-none">
+				<div class="row align-items-center">
+					<!-- Page title actions -->
+					<div class="page-header d-print-none">
+						<div class="row ">
+							<div class="d-flex justify-content-between">
+								<h2 class="page-title">
+									Feedbacks Management
+								</h2>
+								<button class="btn btn-primary" data-bs-toggle="modal"
+								        data-bs-target="#modal-create-result">
+									<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+								    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+									<circle cx="12" cy="12" r="9" />
+									<line x1="9" y1="12" x2="15" y2="12" />
+									<line x1="12" y1="9" x2="12" y2="15" /></svg>
+									Add New Feedback</button>
+							</div>
+							<div class="row mt-3">
+							
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+		
+				</div>
+			</div>
+			<div class="row row-cards">
+				<div class="col-12">
+					<div class="card">
+						<div class="table-responsive">
+							<table id="tabledb" class="table table-vcenter table-bordered card-table table-striped">
+								<thead>
+								<tr>
+									<th>No.</th>
+									<th>Feedback Title</th>
+									<th>Student Group</th>
+									<th>Subject</th>
+									<!-- <th>Lecturer</th> -->
+									<th>Start Date<br/><small>(YYYY-MM-DD)</small></th>
+									<th>End Date<br/><small>(YYYY-MM-DD)</small></th>
+									<th>Visible<br/><small>(Show or hide for Student)</small></th>
+									<th>Action</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr th:each="item, i :${list}">
+										
+										<td th:text="${(i.index + 1)}"></td>
+										<!--<td th:text="${item.getFeedbackid()}"></td>-->
+										<td th:text="${item.getNamefeedback()}"></td>
+										<td th:text="${item.getStugroupnm()}"></td>
+										<td th:text="${item.getSubjectnm()}"></td>
+										<td th:text="${item.getDateoffeedback()}"></td>
+										<td th:text="${item.getEnddatefeedback()}"></td>
+										<td>
+											<input type="hidden" th:value="${item.getFeedbackid()}" />
+											<select class="form-select country">
+												<option value="true" th:selected="${(item.getFeedbackstatus() == 'true')}">Show</option>
+												<option value="false" th:selected="${(item.getFeedbackstatus() == 'false')}">Hide</option>
+											</select>
+										</td>
+										<td>
+											<button class="btn btn-vk btn-icon mx-1" onclick="findStudentFeedback(this)">
+												<svg xmlns="http://www.w3.org/2000/svg" class="icon"
+												width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+												stroke="currentColor" fill="none" stroke-linecap="round"
+												stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<circle cx="12" cy="12" r="2" />
+												<path
+												d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+												</svg>
+												<input type="hidden" th:value="${item.getFeedbackid()}">
+												<input type="hidden" th:id="'counter'+${item.getFeedbackid()}" value="0"/>
+											</button>
+											<th:block th:if="${item.getCount()} == '0'">
+												<button class="btn btn-vk btn-icon" onclick="findFeedback(this)"
+												data-bs-toggle="modal" data-bs-target="#modal-edit-student">
+													<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+														viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+														stroke-linecap="round" stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+														<path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+														<line x1="16" y1="5" x2="19" y2="8" />
+													</svg>
+													<input type="hidden" th:value="${item.getFeedbackid()}">
+												</button>
+<!--												<button class="btn btn-google btn-icon" onclick="deleteFeedback(this)">-->
+<!--													<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"-->
+<!--														 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"-->
+<!--														 stroke-linecap="round" stroke-linejoin="round">-->
+<!--													   <path stroke="none" d="M0 0h24v24H0z" fill="none" />-->
+<!--													   <path d="M15 3v4a1 1 0 0 0 1 1h4" />-->
+<!--													   <path-->
+<!--															   d="M17 17h-6a2 2 0 0 1 -2 -2v-6m0 -4a2 2 0 0 1 2 -2h4l5 5v7c0 .294 -.063 .572 -.177 .823" />-->
+<!--													   <path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2" />-->
+<!--													   <line x1="3" y1="3" x2="21" y2="21" />-->
+<!--													</svg>-->
+<!--													<input type="hidden" th:value="${item.getFeedbackid()}">-->
+<!--												</button>-->
+											</th:block>
+											<th:block th:if="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')} > ${item.getEnddatefeedback()} or ${item.getCount()} == '0'">
+												<button class="btn btn-google btn-icon" onclick="deleteFeedback(this)">
+													<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+													     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+													     stroke-linecap="round" stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M15 3v4a1 1 0 0 0 1 1h4" />
+														<path
+																  d="M17 17h-6a2 2 0 0 1 -2 -2v-6m0 -4a2 2 0 0 1 2 -2h4l5 5v7c0 .294 -.063 .572 -.177 .823" />
+														<path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2" />
+														<line x1="3" y1="3" x2="21" y2="21" />
+													</svg>
+													<input type="hidden" th:value="${item.getFeedbackid()}">
+												</button>
+											</th:block>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="studentFeedbackList" class="mt-lg-5">
+
+			</div>
+
+		</div>
+		<footer th:replace="fragments :: footer"></footer>
+
+	</div>
+</div>
+<div class="modal modal-blur fade show" id="modal-create-result" tabindex="-1" aria-modal="true" role="dialog">
+	<div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Submit Feedback</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div th:replace="feedbackFormPartial :: feedbackCreate"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-blur fade show" id="modal-edit-student" tabindex="-1" aria-modal="true" role="dialog">
+	<div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Edit Feedback</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div th:replace="feedbackFormPartial :: feedbackEdit"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+<script th:src="@{/dist/js/feedback.js}"></script>
+<div th:replace="fragments :: scriptjs"></div>
+</body>
+</html>

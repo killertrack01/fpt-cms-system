@@ -1,0 +1,99 @@
+<!-- Modal Create role -->
+<div th:fragment="roleCreate">
+    <div class="modal modal-blur fade show" id="createRole" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">New Role</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createRole">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Role Name</label>
+                                        <input type="text" class="form-control" id="rolenm" name="rolenm">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="mb-3">
+                                        <label class="form-label">Descrption</label>
+                                        <input type="text" class="form-control" id="descriptions" name="descrptions">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="Create">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal Update department -->
+<div th:fragment="roleEdit">
+    <div class="modal modal-blur fade show" id="updateRole" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title">Department</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editRole">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <input type="hidden" id="roleid" name="roleid">
+                                        <label class="form-label">Role Name</label>
+                                        <input type="text" class="form-control" id="editrolenm" name="rolenm">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="mb-3">
+                                        <label class="form-label">Descrption</label>
+                                        <input type="text" class="form-control" id="editdescriptions" name="descriptions">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Submit button-->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                        Cancel
+                                    </a>
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 d-flex justify-content-end">
+                                    <input type="submit" class="btn btn-primary" value="Update">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+    <title>Lecturer Profile - Dashboard</title>
+</head>
+
+<body class="antialiased">
+<div class="page">
+    <!-- Include Navbar -->
+    <header th:replace="fragments :: navbar"></header>
+    <div th:replace="fragments :: subnav"></div>
+    <div class="content">
+        <div class="container-fluid">
+            <!-- Page title -->
+            <div class="d-print-none">
+                <div class="row align-items-center">
+                    <!-- Page title actions -->
+                    <div class="page-header d-print-none">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h2 class="page-title">
+                                    Lecturer Profile
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form id="update_lecturer" enctype="multipart/form-data">
+                <div class="row row-cards">
+                    <div class="col-12 col-xl-8">
+                        <div class="card card-body shadow-sm mb-4">
+                            <h2 class="h3 mb-4">General information</h2>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <div class="form-field">
+                                            <input type="hidden" th:value="${info.lecturid}" name="lecturid"
+                                                   id="lecturid" />
+                                            <label for="rollnum">Rollnum</label>
+                                            <input class="form-control" th:value="${info.rollnum}" id="rollnum"
+                                                   name="rollnum" type="text">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <div class="form-field">
+                                            <label for="fullnm">Fullname</label>
+                                            <input class="form-control" th:value="${info.fullnm}" id="fullnm"
+                                                   name="fullnm" type="text">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <div class="form-field">
+                                            <label for="idcard">IdCard</label>
+                                            <input class="form-control" th:value="${info.idcard}" id="idcard"
+                                                   name="idcard" type="text">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <div class="form-field">
+                                            <label for="dob">DateOfBirth</label>
+                                            <input class="form-control" th:value="${info.dob}" id="dob" name="dob"
+                                                   type="date">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="mb-3">
+                                        <div class="form-field">
+                                            <label for="gender">Gender</label>
+                                            <select class="form-select mb-0" id="gender" name="gender"
+                                                    aria-label="Gender select example">
+                                                <option value="">Select Gender</option>
+                                                <option th:each="g : ${genders}" th:value="${g}" th:text="${g}"
+                                                        th:selected="${(g == gender)}"></option>
+                                            </select>
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <div class="form-field">
+                                            <label for="email">Email</label>
+                                            <input class="form-control" th:value="${info.email}" id="email"
+                                                   name="email" type="email">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <div class="form-field">
+                                            <label for="companyemail">CompanyEmail</label>
+                                            <input class="form-control" th:value="${info.companyemail}"
+                                                   id="companyemail" name="companyemail" type="email">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            <label for="poi">PlaceOfIssue</label>
+                                            <input class="form-control" th:value="${info.poi}" id="poi" name="poi"
+                                                   type="text">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            <label for="doi">DateOfIssue</label>
+                                            <input class="form-control" th:value="${info.doi}" id="doi" name="doi"
+                                                   type="date">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            <label for="phone">Phone</label>
+                                            <input class="form-control" th:value="${info.phone}" id="phone"
+                                                   name="phone" type="text">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 mb-3">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            <label for="address">Address</label>
+                                            <input class="form-control" th:value="${info.address}" id="address"
+                                                   name="address" type="text">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="h3 my-3">Specialize</h2>
+                            <div class="row">
+                                <div class="col-sm-4 mb-3">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            <label for="contract">Contract</label>
+                                            <input class="form-control" id="contract" th:value="${info.contract}"
+                                                   name="contract" type="text">
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 mb-3">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            <label for="major">Major</label>
+                                            <select class="form-select mb-0" id="major" name="major"
+                                                    aria-label="Gender select example">
+                                                <option value="">Select Major</option>
+                                                <option th:each="m : ${majors}" th:value="${m.getBranchnm()}" th:text="${m.getBranchnm()}"
+                                                        th:selected="${( m.getBranchnm() == major )}"></option>
+                                            </select>
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            <label for="lecturertype">LecturerType</label>
+                                            <select class="form-select mb-0" id="lecturertype" name="lecturertype"
+                                                    aria-label="Gender select example">
+                                                <option value="">Select LecturerType</option>
+                                                <option th:each="t : ${types}" th:value="${t}" th:text="${t}"
+                                                        th:selected="${( t.contains(type) )}"></option>
+                                            </select>
+                                            <small style="color: red;"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <input type="submit" class="btn btn-dark" value="Update">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <div class="card shadow-sm text-center p-0">
+                                    <div class="profile-cover rounded-top"
+                                         data-background="../assets/img/profile-cover.jpg"></div>
+                                    <div class="card-body">
+                                        <img th:src="@{'~/dist/img/teachers/' + ${avatar}}"
+                                             class="user-avatar large-avatar rounded-circle mx-auto mt-n7 mb-4"/>
+                                        <h4 class="h3" th:text="${info.fullnm}"></h4>
+                                        <h5 class="fw-normal" th:text="${info.major}"></h5>
+                                        <p class="text-gray mb-4" th:text="${info.major} + ', VietNam'"></p>
+                                        <a onclick="findLecturer(this)" class="btn btn-sm btn-secondary" data-bs-toggle="modal"
+                                           data-bs-target="#modal-sendmail">
+                                            Send Email
+                                            <input type="hidden" th:value="${info.lecturid}"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-body shadow-sm mb-4">
+                                    <h2 class="h5 mb-4">Select profile photo</h2>
+                                    <div class="mb-3">
+                                        <div class="form-label">Custom File Input</div>
+                                        <input type="file" class="form-control" id="file" name="file" />
+                                        <small>File Extension: only .jpg | .jpeg | .png (Photo)</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-body shadow-sm mb-4">
+                                    <h2 class="h5 mb-4">Reset Password</h2>
+                                    <div class="mb-3">
+                                        <!-- Password -->
+                                        <label class="form-label">Password</label>
+                                        <input type="password" id="lecturerPass" name="lecturerPass" class="form-control" placeholder="Enter Password">
+                                        <small></small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- Re entered password -->
+                                        <label class="form-label">Confirm Password</label>
+                                        <input type="password" id="reLecturerPass" class="form-control" placeholder="ReEnter Password">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal modal-blur fade" id="modal-sendmail" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-md" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">New Email</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="sendEmail" enctype="multipart/form-data">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <input type="hidden" id="idsendmailprofile" name="idsendmail">
+                                            <div class="mb-3">
+                                                <label class="form-label">Subject Email</label>
+                                                <input type="text" name="mailsubject" class="form-control">
+                                                <small></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">Message</label>
+                                                <textarea rows="6" name="mailmessage" class="form-control"></textarea>
+                                                <small></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">Attachment</label>
+                                                <input type="file" name="attachments" class="form-control" />
+                                                <small></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Submit button-->
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                                                Cancel
+                                            </a>
+                                        </div>
+                                        <div class="col-4"></div>
+                                        <div class="col-4 d-flex justify-content-end">
+                                            <input type="submit" class="btn btn-primary" value="SEND">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer th:replace="fragments :: footer"></footer>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+<script th:src="@{/dist/js/adminlecturerprofile.js}"></script>
+<div th:replace="fragments :: scriptjs"></div>
+</body>
+</html>

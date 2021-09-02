@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+   <title>Import Student - Dashboard</title>
+</head>
+
+<body class="antialiased">
+   <div class="page">
+      <!-- Include Navbar -->
+      <header th:replace="fragments :: navbar"></header>
+      <div th:replace="fragments :: subnav"></div>
+      <div class="content">
+         <div class="container-fluid">
+            <!-- Page title -->
+            <div class="d-print-none">
+               <div class="row align-items-center">
+                  <!-- Page title actions -->
+                  <div class="page-header d-print-none">
+                     <div class="row align-items-center">
+                       <div class="col">
+                         <h2 class="page-title">
+                           Import Student List
+                         </h2>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+            </div>
+            <div class="row row-cards">   
+               <div class="col-5"> 
+                    <div class="mb-3">
+                       <form action="/uploadExcel" method = "POST" enctype = "multipart/form-data">
+                           <div class="form-label">Student File Excel</div>
+                           <input type="file" name="file" id="file" class="form-control"/><br>
+                           <input type="submit" class="btn btn-vk btn-md" value="Import"/>
+                           <small>File Extension: only .xls | .xlsx (Excel)</small>
+                           
+                       </form>
+                    </div>
+               </div>
+             </div>
+         </div>
+         <footer th:replace="fragments :: footer"></footer>
+      </div>
+   </div>
+   <div th:replace="fragments :: scriptjs"></div>
+</body>
+
+</html> 

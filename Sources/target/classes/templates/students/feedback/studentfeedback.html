@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head">
+	<title>Student Send Feedback - Dashboard</title>
+</head>
+<body class="antialiased">
+<div class="page">
+	<!-- Include Navbar -->
+	<header th:replace="stu-fragments :: stunavbar"></header>
+	<div th:replace="stu-fragments :: stusubnav"></div>
+	<div class="content">
+		<div class="container-fluid">
+			<!-- Page title -->
+			<div class="d-print-none">
+				<div class="row align-items-center">
+					<!-- Page title actions -->
+					<div class="page-header d-print-none">
+						<div class="row">
+							<div class="d-flex justify-content-between">
+								<h1 class="page-title">
+									STUDENT FEEDBACK FORM FOR TEACHER
+								</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<div class="col-2">
+					<span><b>Batch:</b> <span class="" th:text="${feedbackdto.getStugroupnm()}"></span></span>
+				</div>
+				<div class="col-2">
+					<span><b>Month:</b> <span class="" th:text="${feedbackdto.getDateoffeedback()}"></span></span>
+				</div>
+			</div>
+			<div class="row mb-4">
+				<div class="col-2">
+					<span><b>Subject:</b> <span class="" th:text="${feedbackdto.getSubjectnm()}"></span></span>
+				</div>
+				<div class="col-3">
+					<span><b>Teacher:</b> <span class="" th:text="${feedbackdto. getLecturernm()}"></span></span>
+				</div>
+			</div>
+			<form id="submitform">
+				<input id="feedbackid" name="feedbackid" th:value="${feedbackid}" type="hidden"/>
+				<input id="studentroll" name="studentroll" th:value="${studentroll}" type="hidden"/>
+				<div class="row mt-0 mb-3">
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								<div class="">
+									<h4>Regarding the teacher's punctuality <span class="text-danger">*</span></h4>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="form-check mb-2">
+									<input checked class="form-check-input" id="question1-1" name="ans1" type="radio" value="4">
+									<label class="form-check-label " for="question1-1">
+										Always punctual
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question1-2" name="ans1" type="radio" value="3">
+									<label class="form-check-label " for="question1-2">
+										Mostly punctual
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question1-3" name="ans1" type="radio" value="2">
+									<label class="form-check-label " for="question1-3">
+										Rarely punctual
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question1-4" name="ans1" type="radio" value="1">
+									<label class="form-check-label " for="question1-4">
+										Not at all punctual
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								<div class="">
+									<h4>Teacher's response to student's questions in class <span class="text-danger">*</span></h4>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question5-1" name="ans5" type="radio" value="4">
+									<label class="form-check-label " for="question5-1">
+										Answered immediately or just after the session
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question5-2" name="ans5" type="radio" value="3">
+									<label class="form-check-label " for="question5-2">
+										Answered in the next session
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question5-3" name="ans5" type="radio" value="2">
+									<label class="form-check-label " for="question5-3">
+										Some queries left unanswered
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question5-4" name="ans5" type="radio" value="1">
+									<label class="form-check-label " for="question5-4">
+										Most queries left unanswered
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								<div class="">
+									<h4>Support from the teacher - guidance for practical exercises, answering questions out side of class <span class="text-danger">*</span></h4>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question4-1" name="ans4" type="radio" value="4">
+									<label class="form-check-label " for="question4-1">
+										Very Good
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question4-2" name="ans4" type="radio" value="3">
+									<label class="form-check-label " for="question4-2">
+										Good
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question4-3" name="ans4" type="radio" value="2">
+									<label class="form-check-label " for="question4-3">
+										Average
+									</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" id="question4-4" name="ans4" type="radio" value="1">
+									<label class="form-check-label " for="question4-4">
+										Poor
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+            </div>
+            <div class="row mt-0">
+               <div class="col-md-4">
+                  <div class="card">
+                     <div class="card-header">
+                        <div class="">
+                           <h4>Teaching skills of teacher <span class="text-danger">*</span></h4>
+                        </div>
+                     </div>
+                     <div class="card-body">
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" id="question2-1" name="ans2" type="radio" value="4">
+                           <label class="form-check-label " for="question2-1">
+                              Very Good
+                           </label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" id="question2-2" name="ans2" type="radio" value="3">
+                           <label class="form-check-label " for="question2-2">
+                              Good
+                           </label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" id="question2-3" name="ans2" type="radio" value="2">
+                           <label class="form-check-label " for="question2-3">
+                              Average
+                           </label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" id="question2-4" name="ans2" type="radio" value="1">
+                           <label class="form-check-label " for="question2-4">
+                              Poor
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="card">
+                     <div class="card-header">
+                        <div class="">
+                           <h4>The teacher adequately covers the topics required <br/> by the syllabus <span class="text-danger">*</span></h4>
+                        </div>
+                     </div>
+                     <div class="card-body">
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" id="question3-1" name="ans3" type="radio" value="4">
+                           <label class="form-check-label " for="question3-1">
+                              Fully covered
+                           </label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" id="question3-2" name="ans3" type="radio" value="3">
+                           <label class="form-check-label " for="question3-2">
+                              Mostly covered
+                           </label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" id="question3-3" name="ans3" type="radio" value="2">
+                           <label class="form-check-label " for="question3-3">
+                              Partially covered
+                           </label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" id="question3-4" name="ans3" type="radio" value="1">
+                           <label class="form-check-label " for="question3-4">
+                              Not at all covered
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="card">
+                     <div class="card-header">
+                        <div class="">
+                           <h4>Leave the feedback here</h4>
+                        </div>
+                     </div>
+                     <div class="card-body">
+                        <div class="form-group">
+                           <textarea class="form-control" id="note" name="note" rows="6"></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row mt-3">
+               <div class="text-center">
+                  <input class="btn btn-primary btn-lg" type="submit" value="SUBMIT">
+               </div>
+            </div>
+			</form>
+		</div>
+		<footer th:replace="fragments :: footer"></footer>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+<script th:src="@{/dist/js/studentfeedback.js}"></script>
+<div th:replace="fragments :: scriptjs"></div>
+</body>
+</html>

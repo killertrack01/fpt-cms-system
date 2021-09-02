@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html_head">
+    <title>Profile Strudent - Dashboard</title>
+</head>
+<body class="antialiased">
+<div class="page">
+    <!-- Include Navbar -->
+    <header th:replace="fragments :: navbar"></header>
+    <div th:replace="fragments :: subnav"></div>
+    <div class="content">
+        <div class="container-fluid">
+            <!-- Page title -->
+            <div class="d-print-none">
+                <div class="row align-items-center">
+                    <!-- Page title actions -->
+                    <div class="page-header d-print-none">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h2 class="page-title">
+                                    Student Profile
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form id="editStudentForm" enctype="multipart/form-data">
+                <div class="row row-cards">
+                    <div class="col-12 col-xl-8">
+                        <div class="card card-body shadow-sm mb-4">
+                            <div class="row">
+                                <h1>Personal information</h1>
+                                <hr>
+                                <div class="form-row mb-2 row">
+                                    <input type="text" th:value="${student.getStuid()}" class="form-control" hidden id="editstudentid" name="stuid"
+                                    >
+                                    <div class="form-row mb-2 row">
+                                        <!-- Full name -->
+                                        <div class="col-6">
+                                            <label class="form-label">Full name</label>
+                                            <input type="text" th:value="${student.getFullnm()}" class="form-control" id="editfullname" name="fullnm" placeholder="Enter fullname">
+                                            <small></small>
+                                        </div>
+                                        <!-- College email -->
+                                        <div class="col-6">
+                                            <label class="form-label">Collegee email</label>
+                                            <input type="text" th:value="${student.getCollegeemail()}" class="form-control" id="editcollegeemail" name="collegeemail" placeholder="ColegeEmail@gmail.com">
+                                            <small></small>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mb-2 row">
+                                        <!-- Email -->
+                                        <div class="col-5">
+                                            <label class="form-label">Email</label>
+                                            <input type="text" th:value="${student.getEmail()}" class="form-control" id="editemail" name="email" placeholder="Email@gmail.com">
+                                            <small></small>
+                                        </div>
+                                        <!-- Address -->
+                                        <div class="col-7">
+                                            <label class="form-label">Address</label>
+                                            <input type="text" th:value="${student.getAddress()}" class="form-control " id="editaddress" name="address" placeholder="Enter last name">
+                                            <small></small>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mb-2 row">
+                                        <!-- Day of birth -->
+                                        <div class="col-4">
+                                            <label class="form-label">Day of birth</label>
+                                            <input type="date" th:value="${student.getDob()}" id="editdob" name="dob" class="form-control">
+                                            <small></small>
+                                        </div>
+                                        <!-- Gender -->
+                                        <div class="col-4">
+                                            <label class="form-label">Gender</label>
+                                            <select id="editgender" name="gender" class="form-select">
+                                                <option value="Male" th:selected="('Male' == ${student.getGender()})">Male
+                                                </option>
+                                                <option value="Female" th:selected="('Female' == ${student.getGender()})">Female
+                                                </option>
+                                                <option value="Other" th:selected="('Other' == ${student.getGender()})">Other
+                                                </option>
+                                            </select>
+                                            <small></small>
+                                        </div>
+                                        <!-- Mobile phone -->
+                                        <div class="col-4">
+                                            <label class="form-label">Mobile phone</label>
+                                            <input type="text" th:value="${student.getMobphone()}" class="form-control" id="editmobilephone" name="mobphone"
+                                                   placeholder="Enter mobile phone">
+                                            <small></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h1>Parent</h1>
+                                <hr>
+                                <div class="form-row mb-2 row">
+                                    <!-- Parent name -->
+                                    <div class="col-4">
+                                        <label class="form-label">Parent name</label>
+                                        <input type="text" th:value="${parent.getParnm()}" class="form-control" id="editparentname" name="parnm"
+                                               placeholder="Enter parent name">
+                                        <small></small>
+                                    </div>
+                                    <!-- Parent job -->
+                                    <div class="col-4">
+                                        <label class="form-label">Parent job</label>
+                                        <input type="text" th:value="${parent.getParjob()}" class="form-control" id="editparentjob" name="parjob"
+                                               placeholder="Enter parent job">
+                                        <small></small>
+                                    </div>
+                                    <!-- Parent phone -->
+                                    <div class="col-4">
+                                        <label class="form-label">Parent phone</label>
+                                        <input type="text" th:value="${parent.getParphone()}" class="form-control" id="editparentphone" name="parphone"
+                                               placeholder="Enter parent phone ">
+                                        <small></small>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-2 row">
+                                    <!-- Parent email -->
+                                    <div class="col-12">
+                                        <label class="form-label">Parent email</label>
+                                        <input type="text" th:value="${parent.getParemail()}" class="form-control" id="editparentemail" name="paremail"
+                                               placeholder="Email@gmail.com">
+                                        <small></small>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-4 row">
+                                    <!-- Parent Address -->
+                                    <div class="col-6">
+                                        <label class="form-label">Parent address</label>
+                                        <input type="text" th:value="${parent.getAddress()}" class="form-control" id="editparentaddress" name="paddress"
+                                               placeholder="Enter parent address">
+                                        <small></small>
+                                    </div>
+                                    <!-- Place of work -->
+                                    <div class="col-6">
+                                        <label class="form-label">Place of work</label>
+                                        <input type="text" th:value="${parent.getPow()}" class="form-control" id="editplaceofwork" name="pow"
+                                               placeholder="Enter place of work">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h1>Identity</h1>
+                                <hr>
+                                <div class="form-row mb-4 row">
+                                    <!-- Id card -->
+                                    <div class="col-4">
+                                        <label class="form-label">Id card number</label>
+                                        <input type="text" th:value="${student.getIdcard()}" class="form-control" id="editidcard" name="idcard" placeholder="Enter id card number">
+                                        <small></small>
+                                    </div>
+                                    <!-- day issue -->
+                                    <div class="col-4">
+                                        <label class="form-label">Date issue</label>
+                                        <input type="date" th:value="${student.getDoi()}" id="editdateissue" name="doi" class="form-control">
+                                        <small></small>
+                                    </div>
+                                    <!-- place issue -->
+                                    <div class="col-4">
+                                        <label class="form-label">Place issue</label>
+                                        <input type="text" th:value="${student.getPoi()}" class="form-control" id="editplaceissue" name="poi"
+                                               placeholder="Enter place issue ">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h1>Major</h1>
+                                <hr>
+                                <div class="form-row mb-4 row">
+                                    <!-- Major -->
+                                    <div class="col">
+                                        <label class="form-label">Major</label>
+                                        <select class="form-select" th:value="${student.getMajor()}" id="editmajor" name="major">
+                                            <option value="">---Select major---</option>
+                                            <option th:each="m:${major}" th:value="${m.branchnm}" th:text="${m.branchnm}" th:selected="(${m.branchnm} == ${student.getMajor()})"></option>
+                                        </select>
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-dark">Update</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <div class="card shadow-sm text-center p-0">
+                                    <div class="profile-cover rounded-top"
+                                         data-background="../assets/img/profile-cover.jpg"></div>
+                                    <div class="card-body">
+                                        <img
+                                                th:src="@{'/dist/img/students/' + ${student.getImg()}}"
+                                             class="user-avatar large-avatar rounded-circle mx-auto mt-n7 mb-4"
+                                             alt="User Avatar">
+                                        <h4 class="h3"
+                                            th:text="${student.getFullnm()}">
+                                        </h4>
+                                        <h5 class="fw-normal">Student</h5>
+                                        <p class="text-gray mb-4" th:text="${student.getAddress()}"></p>
+                                        <a class="btn btn-sm btn-secondary" href="#">Send Email</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-body shadow-sm mb-4">
+                                    <h2 class="h5 mb-4">Select profile photo</h2>
+                                    <div class="mb-3">
+                                        <!-- Avatar input -->
+                                        <label class="form-label">Avatar</label>
+                                        <input type="file" id="editavatar" name="img" class="form-control">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-body shadow-sm mb-4">
+                                    <h2 class="h5 mb-4">Reset Password</h2>
+                                    <div class="mb-3">
+                                        <!-- Password -->
+                                        <label class="form-label">Enter new passwork</label>
+                                        <input type="password" id="StudentPass" name="studentPass" class="form-control" placeholder="Enter Password">
+                                        <small></small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- Re entered password -->
+                                        <label class="form-label">Enter passwork again</label>
+                                        <input type="password" id="ReStudentPass" class="form-control" placeholder="ReEnter Password">
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer th:replace="fragments :: footer"></footer>
+    </div>
+</div>
+<div th:replace="fragments :: scriptjs"></div>
+<script th:src="@{/dist/js/studentprofile.js}"></script>
+<script th:src="@{/dist/libs/sweetalert2/dist/sweetalert2.all.min.js}"></script>
+</body>
+</html>
